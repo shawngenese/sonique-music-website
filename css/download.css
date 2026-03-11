@@ -26,8 +26,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
-nav li {
+li {
     list-style: none;
 }
 
@@ -57,7 +56,6 @@ nav {
     background-color: var(--main-bg-color);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 nav .logo {
     display: flex;
     align-items: center;
@@ -68,7 +66,6 @@ nav .logo {
 nav .logo h1 {
     font-size: clamp(2em, 2vw, 2.2em);
 }
-
 nav .nav-menu {
     display: flex;
     align-items: center;
@@ -80,7 +77,6 @@ nav .nav-menu {
 .nav-menu li a i {
     transition: all .3s ease;
 }
-
 nav .nav-menu li a:hover,
 nav .nav-menu li a:hover i{
     color: var(--primary-color);
@@ -89,7 +85,6 @@ nav .nav-menu li a:hover i{
 nav .nav-menu li:hover:nth-child(4) {
     all: unset;
 }
-
 .nav-menu .loginBtn {
     padding: 10px 50px;
     background-color: var(--primary-color);
@@ -102,12 +97,10 @@ nav .nav-menu li:hover:nth-child(4) {
     cursor: pointer;
     transition: all .1s ease-out;
 }
-
 .nav-menu .loginBtn:hover {
     background-color: var(--primary-color);
     scale: 1.05;
 }
-
 .nav-menu .loginBtn:active {
     background-color: orangered;
     scale: 0.95;
@@ -122,154 +115,15 @@ main {
     margin-top: 85px;
     background-color: var(--primary-bg-color);
 }
-
-main > h1 {
-    font-size: clamp(2em, 4vw, 4em);
-    text-align: center;
-
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 0.8s;
-}
-
-main > p {
-    font-size: clamp(1rem, 2vw, 1.6rem);    
-    text-align: center;
-
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.2s;
-}
-main .premium-boxes {
+.microsoft-download {
     display: flex;
-    flex-wrap: wrap;
-    margin: 60px;
-    justify-content: center;
-    gap: 40px;
-}
-main .premium-box {
-    position: relative;
-    background-color: var(--secondary-bg-color);
-    padding: 50px 20px 60px 20px;
-    border-radius: 15px;
-    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
-    box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.3),  
-    0 8px 20px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5px;
-    max-width: 390px;
 }
 
-.premium-box.orange{
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.4s;
-}
-.premium-box.violet{
-        opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.6s;
-}
-.premium-box.yellow{
-        opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.8s;
-}
-.premium-box.blue{
-        opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 2s;
-}
-
-main .premium-box span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    border-radius: 15px 0 15px 0;
-    font-weight: 500;
-}
-.premium-title .logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 8px 0;
-}
-.premium-box h1 {
-    font-size: 2.7em;
-    margin: 0 0 5px 0;
-    color: var(--primary-color);
-}
-.premium-box p {
-    font-size: 0.9rem;
-    margin: 1px 0;
-    font-weight: 600;
-}
-.premium-box .gray-text {
-    font-weight: 500;
-    color: var(--light-gray-color);
-}
-.premium-box li {
-    margin: 0 20px;
-}
-.premium-box button {
-    padding: 10px 50px;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 30px;
-
-    font-weight: 600;
-    font-size: clamp(0.7rem, 2vw, 1rem);
-    margin: 30px 0;
-    cursor: pointer;
-    transition: all .1s ease-out;
-}
-.premium-box button:hover {
-    opacity: 0.93;
-    scale: 1.03;
-}
-.premium-box button:active {
-    scale: 0.98;
-}
-.premium-box .premium-description {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--light-gray-color);
-    max-width: 350px;
-}
-.premium-boxes .premium-box.violet h1{
-    color: violet;
-}
-.premium-boxes .premium-box.violet span,
-.premium-boxes .premium-box.violet button {
-    background-color: violet;
-}
-.premium-boxes .premium-box.yellow h1{
-    color: yellowgreen;
-}
-.premium-boxes .premium-box.yellow button {
-    background-color: yellowgreen;
-}
-.premium-boxes .premium-box.blue h1{
-    color: dodgerblue;
-}
-.premium-boxes .premium-box.blue button {
-    background-color: dodgerblue;
-}
 
 
 footer {
     background-color: black;
     padding: 50px 100px 50px 100px;
-}
-footer li {
-    list-style: none;
 }
 
 footer .container,
@@ -282,27 +136,22 @@ footer .last-container {
 footer .container .footer-containers.logo {
     display: flex;
 }
-
 footer .container .footer-containers.logo h1 {
     margin: 1px 0 0 5px;
     font-weight: 600;
     font-size: 1.4rem;
 }
-
 footer .footer-containers p{
     color: gray;
 }
-
 footer .footer-containers li{
     margin: 15px 0;
 }
-
 footer .footer-containers li:hover,
 footer .last-container li:hover{
     color: var(--primary-color);
     cursor: pointer;
 }
-
 footer svg {
     background-color: var(--secondary-bg-color);
     padding: 10px;
@@ -310,14 +159,12 @@ footer svg {
     cursor: pointer;
     margin: 5px;
 }
-
 footer .last-container ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px
 }
-
 @keyframes slideUp {
     from {
         transform: translateY(100px);
@@ -327,7 +174,6 @@ footer .last-container ul {
         opacity: 1;
     }
 }
-
 @keyframes rightToLeft {
     from {
         transform: translateX(100px);
@@ -345,7 +191,6 @@ footer .last-container ul {
         opacity: 1;
     }
 }
-
 nav .nav-menu.active {
     position: fixed;
     top: 70px;
@@ -362,7 +207,6 @@ nav .nav-menu.active {
 nav .nav-menu.active :nth-child(4){
     display: none;
 }
-
 nav .hamburger-menu {
     position: fixed;
     right: 10px;
@@ -372,10 +216,14 @@ nav .hamburger-menu {
     font-size: 2em;
 }
 
+
 @media (max-width: 481px) {
+  /* Styles for screens wider than 480px */
 
 }
 @media (max-width: 768px) {
+  /* Styles for screens wider than 768px (e.g., tablet portrait, small laptops) */
+
   .panel3 .description-images {
     margin: 20px;
     width: 100%;
@@ -390,6 +238,7 @@ nav .hamburger-menu {
 
 }
 @media (max-width: 1128px) {
+  /* Styles for screens wider than 1024px (e.g., large tablets landscape, desktops) */
     .panel1 img {
     width: 60%;
   }
