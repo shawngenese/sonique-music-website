@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonique - Web Player</title>
+    <title>Download App | Sonique - Web Player</title>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/download.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,8 +24,8 @@
         </div>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="premium.html">Premium plans</a></li>
+            <!-- <li><a href="#">Support</a></li> -->
             <li><span>|</span></li>
             <li><a href="#"><i class="uil uil-arrow-circle-down"></i> Install App</a></li>
             <li><a href="#">Sign up</a></li>
@@ -34,16 +34,39 @@
         <button class="hamburger-menu">&#9776;</button>
     </nav>
     <main>
-        <div class="download-container">
+        <section class="download-container">
             <h1>Download Sonique</h1>
             <p>Play millions of songs and podcasts on your device.</p>
-            <div class="microsoft-download">
-                <div class="img"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 640 640"><path fill="currentColor" d="M96 96h214.6v214.6H96zm233.4 0H544v214.6H329.4zM96 329.4h214.6V544H96zm233.4 0H544V544H329.4z"/></svg></div>
-                <p>Download from the</p>
-                <h1>Microsoft Store</h1>
+            <button class="microsoft-download btn">
+                <div class="img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 640 640">
+                        <path fill="dodgerblue" d="M96 96h214.6v214.6H96zm233.4 0H544v214.6H329.4zM96 329.4h214.6V544H96zm233.4 0H544V544H329.4z"/>
+                    </svg>
+                </div>
+                <div class="download-text">
+                    <p>Download from the</p>
+                    <h1>Microsoft Store</h1>
+                </div>
+            </button>
+            <a class="platforms"><u>Download directly from sonique</u></a>
+        </section>
+
+        <section class="download-platforms">
+            <h1>Download Sonique on different devices</h1>
+            <p>Using Sonique on your phone or tablet is free, easy, and fun.</p>
+
+            <div class="platforms-collection">
+                <a href="#" class="platforms"><img src="assets/images/appstore.png" alt="" height="90px" loading="lazy"></a>
+                <a href="#" class="platforms"><img src="assets/images/microsoft.png" alt="" height="90px" loading="lazy"></a>
+                <a href="#" class="platforms"><img src="assets/images/playstore.png" alt="" height="90px" loading="lazy"></a>
             </div>
-            <a href=""><u>Download directly from spotify</u></a>
+
+        </section>
+
+        <div class="load-container">
+            <span class="loader"></span>
         </div>
+
     </main>
     <footer>
         <div class="container">
@@ -79,7 +102,7 @@
                 </ul>
             </div>
             <div class="footer-containers">
-                <p>SPOTIFY PLANS</p>
+                <p>SONIQUE PLANS</p>
                 <ul>
                     <li>Premium Individual</li>
                     <li>Premium Duo</li>
@@ -113,10 +136,31 @@
     <script>
         const hamburger = document.querySelector(".hamburger-menu");
         const navMenu = document.querySelector(".nav-menu");
+        const loadContainer = document.querySelector(".load-container");
+        const loader = document.querySelector(".loader");
+        const microsoftDownload = document.querySelector(".microsoft-download");
+        const platforms = document.querySelectorAll(".platforms");
 
         hamburger.addEventListener("click", () => {
             navMenu.classList.toggle("active");
         });
+
+        microsoftDownload.addEventListener("click", () => {
+            loadContainer.classList.toggle("active");
+            loader.classList.toggle("active");
+        });
+        loadContainer.addEventListener("click", () => {
+            loadContainer.classList.toggle("active");
+            loader.classList.toggle("active");
+        });
+
+        platforms.forEach(platforms => {
+            platforms.addEventListener("click", () => {
+                loadContainer.classList.toggle("active");
+                loader.classList.toggle("active");
+            });
+        });
+        
     </script>
 </body>
 </html>

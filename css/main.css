@@ -112,6 +112,7 @@ main {
 .panel1 {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 84px;
     padding: 130px 60px;
 
@@ -122,7 +123,7 @@ main {
     animation: slideUp forwards 1s ease-out;
 }
 .panel1 h1{
-    font-size: clamp(3rem, 8vw, 9rem);
+    font-size: clamp(2.5rem, 8vw, 9rem);
     font-style: italic;
     font-weight: 700;
     line-height: 1;
@@ -149,7 +150,7 @@ main {
 }
 .panel1 p {
     font-size: 0.9rem;
-    font-size: clamp(0.5rem, 2vw, 0.9rem);
+    font-size: clamp(0.6rem, 2vw, 0.9rem);
     color: var(--light-gray-color);
 }
 .panel1 img {
@@ -174,7 +175,7 @@ main {
   animation-delay: 1.2s;
 }
 .panel1 p {
-        opacity: 0;
+    opacity: 0;
   animation: slideUp 1s ease-out forwards;
   animation-delay: 1.6s;
 }
@@ -186,10 +187,10 @@ main {
     align-items: center;
     text-align: center;
     gap: 40px;
-    padding: 100px 60px 300px 60px;
-
-    background: #212121;
-    background: linear-gradient(271deg,rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    padding: 150px 60px 150px 60px;
+    background-color: var(--primary-color);
+    /* background: #212121;
+    background: linear-gradient(271deg,rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 100%); */
 }
 .panel2 h2 {
     font-size: clamp(2em, 3vw, 4em);
@@ -214,7 +215,7 @@ main {
     align-items: center;
     padding: 100px 80px;
 
-    background-color: var(--primary-bg-color);
+    background-color: var(--secondary-bg-color);
 }
 .panel3 h1 {
     font-size: clamp(2em, 3vw, 4em);
@@ -225,6 +226,7 @@ main {
 }
 .panel3 p {
     font-size: clamp(1rem, 2vw, 1.6rem);
+    margin-bottom: 50px;
 }
 .panel3 .description-images {
     opacity: 0;
@@ -233,7 +235,7 @@ main {
     justify-content: space-around;
     gap: 60px;
     align-items: center;
-    margin: 80px 0;
+    margin: 20px 0;
 
     animation: slideUp linear forwards;
     animation-timeline: view();
@@ -463,10 +465,7 @@ nav .hamburger-menu {
 }
 
 
-@media (max-width: 481px) {
-  /* Styles for screens wider than 480px */
 
-}
 @media (max-width: 768px) {
   /* Styles for screens wider than 768px (e.g., tablet portrait, small laptops) */
 
@@ -517,7 +516,12 @@ nav .hamburger-menu {
     padding: 50px 70px;
   }
 }
-
+@media (max-width: 481px) {
+  /* Styles for screens wider than 480px */
+  .panel1 {
+      padding: 60px 10px;
+  }
+}
 
  /* {
    :root --main-bg-color: #000;
