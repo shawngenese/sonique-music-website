@@ -82,7 +82,7 @@ nav .nav-menu li a:hover i{
     color: var(--primary-color);
     cursor: pointer;
 }
-nav .nav-menu li:hover:nth-child(4) {
+nav .nav-menu li:hover:nth-child(3) {
     all: unset;
 }
 .nav-menu .loginBtn {
@@ -228,6 +228,38 @@ main {
     animation: rotation 0.7s linear infinite;
 }
 
+.error-container, .error {
+    display: none;
+}
+
+.error-container.active {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+}
+
 footer {
     background-color: black;
     padding: 50px 100px 50px 100px;
@@ -318,7 +350,7 @@ nav .nav-menu.active {
     padding: 20px;
     transform: translateY(0);
 }
-nav .nav-menu.active :nth-child(4){
+nav .nav-menu.active :nth-child(3){
     display: none;
 }
 nav .hamburger-menu {
