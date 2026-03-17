@@ -59,8 +59,10 @@ body {
     
     display: flex;
     flex-direction: column;
-    margin-left: 230px;
+    /* margin-left: 230px; */
+    margin-left: 100px;
     margin-bottom: 80px;
+    transition: margin-left 0.3s ease;
 }
 nav {
     position: fixed;
@@ -70,6 +72,7 @@ nav {
     background-color: var(--secondary-bg-color);
     /* width: 230px; */
     width: 100px;
+    transition: width 0.3s ease;
     padding: 20px 0;
     border-radius: 0 30px 30px 0;
 
@@ -77,23 +80,21 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     font-weight: 500;
-
-    /* animation-name: toggleMenu;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; */
 }
 
 nav .logo {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 1.7rem;
     gap: 7px;
     font-weight: 600;
-    margin: 10px 0 30px 20px;
+    margin: 15px 0 50px 0;
 }
 
 .navigations {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -104,6 +105,7 @@ nav .logo {
 }
 .navigations:hover{
     background-color: var(--gray-color);
+    border-radius: 10px;
 }
 .navigations:hover p {
     color: var(--primary-color);
@@ -111,6 +113,44 @@ nav .logo {
 .navigations:hover svg {
     fill: var(--primary-color);
 }
+.logo p, .navigations p,
+.menuToggle p{
+    display: none;
+}
+nav.active .logo p,
+nav.active .navigations p, nav.active .menuToggle p {
+    display: flex;
+}
+nav.active .navigations,
+nav.active .logo {
+    justify-content: center;
+
+}
+nav.active {
+    width: 230px;
+    
+}
+body.nav-active {
+    margin-left: 230px;
+}
+aside.nav-active {
+    left: 240px;
+}
+.menuToggle {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+
+
+
 
 header {
     /* position: fixed;
@@ -204,7 +244,8 @@ main {
 
 aside {
     position: fixed;
-    left: 240px;
+    /* left: 240px; */
+    left: 110px;
     right: 10px;
     bottom: 0;
     background-color: black;
@@ -222,7 +263,7 @@ aside {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     width: 300px;
 }
 .player-aside {
@@ -284,3 +325,10 @@ aside svg {
     height: 25px;
 }
 
+@keyframes toggleMenu {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0);
+    }
+}
