@@ -113,6 +113,31 @@ nav .nav-menu li:hover:nth-child(3) {
     scale: 0.95;
 }
 
+nav .nav-menu.active {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    transform: translateY(0);
+}
+nav .nav-menu.active :nth-child(3){
+    display: none;
+}
+
+nav .hamburger-menu {
+    position: fixed;
+    right: 10px;
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
+
 main {
     padding: 80px 50px;
     display: flex;
@@ -374,31 +399,6 @@ footer .last-container ul {
     } to {
         opacity: 1;
     }
-}
-
-nav .nav-menu.active {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    width: 100%;
-    padding: 10px;
-    transform: translateY(0);
-}
-nav .nav-menu.active :nth-child(3){
-    display: none;
-}
-
-nav .hamburger-menu {
-    position: fixed;
-    right: 10px;
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
 }
 
 @media (max-width: 481px) {

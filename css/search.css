@@ -58,6 +58,7 @@ aside svg:hover {
 }
 html, body {
     scroll-behavior: smooth;
+    animation: fade forwards 1s ease;
 }
 body {
     min-height: 100dvh;
@@ -71,6 +72,7 @@ body {
     margin-left: 100px;
     margin-bottom: 80px;
     transition: margin-left 0.3s ease;
+    
 }
 nav {
     position: fixed;
@@ -169,7 +171,10 @@ header {
     height: 70px;
     background-color: inherit;
 }
-/* .left-header {
+.left-header h1 {
+
+}
+.left-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -180,7 +185,7 @@ header {
 }
 .left-header.active {
     border: 1px solid var(--light-gray-color);
-} */
+}
 .right-header {
     display: flex;
     gap: 20px;
@@ -208,7 +213,31 @@ main {
     border-radius: 30px;
     padding: 10px;
 }
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section h2 {
+    text-align: left;
+    margin: 20px;
 
+}
+.browse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.box {
+    height: 250px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: var(--light-gray-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* galing kay google */
 ::-webkit-scrollbar {
     width: 10px;
@@ -228,28 +257,6 @@ main {
 .playlist-preview {
     margin: 0 0 50px 0;
 }   
-
-.playlist-preview img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 20px;
-}
-.albums-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.recent-albums {
-    display: flex;
-    overflow: auto;
-    margin-bottom: 30px;
-}
-.recent-albums img {
-    border-radius: 10px;
-    margin: 0px 5px 20px 5px;
-}
 
 
 aside {
@@ -346,5 +353,12 @@ aside svg {
         transform: translateX(-100%);
     } to {
         transform: translateX(0);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.9;
+    } to {
+        opacity: 1;
     }
 }

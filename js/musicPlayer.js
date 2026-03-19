@@ -14,7 +14,7 @@ play.addEventListener("click", () => {
     audio.play();
     play.classList.add("active")
     pause.classList.remove("active");
-    musicName.textContent = "Multo - Cup of Joe Playing";
+    musicName.textContent = "Multo - Cup of Joe | Playing";
 
 });
 
@@ -58,4 +58,15 @@ function formatTime(time){
     return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
 }
 
+});
+
+const shuffle = document.querySelector(".shuffleBtn");
+const loop = document.querySelector(".loopBtn");
+
+shuffle.addEventListener("click", () => {
+    shuffle.classList.toggle("active")
+});
+
+loop.addEventListener("click", () => {
+    loop.classList.toggle("active")
 });
