@@ -1,0 +1,115 @@
+:root {
+    --main-bg-color: #000;
+    --primary-bg-color: #121212;
+    --secondary-bg-color: #212121;
+    --gray-color: #535353;
+    --light-gray-color: #b3b3b3;
+    --primary-color: #FF6A21;
+    --main-text-color:white;
+    --main-font: Montserrat, sans-serif;
+    /* --secondary-font:  DM Serif Text, Tahoma; */
+}
+/* orange #FF6A21
+dark gray #212121
+super dark gray 	#121212
+gray 	#535353
+light gray 	#b3b3b3 */
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: var(--main-font);
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100dvh;
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    animation: fade forwards 3s ease;
+}
+body > P {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    width: 500px;
+    color: var(--light-gray-color);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 430px;
+    justify-content: center;
+    padding: 50px 20px;
+    border-radius: 25px;
+    background-color: var(--primary-bg-color);
+}
+section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+}
+form input {
+    padding: 10px;
+    font-weight: 600;
+    background-color: var(--secondary-bg-color);
+    border: 1px var(--primary-bg-color) solid;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+form input[type="submit"] {
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+form .forgot {
+    margin: 10px 0;
+}
+form .createAcc {
+    margin: 10px 0;
+}
+section .lower-part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.lower-part .or  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lower-part > p {
+    margin-top: 10px;
+    color: var(--light-gray-color);
+    font-weight: 500;
+}
+
+section .social-container {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+
+}
+.social-container .socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 20px;
+    border: 2px solid var(--gray-color);
+    border-radius: 50px;
+    font-weight: 600;
+}
