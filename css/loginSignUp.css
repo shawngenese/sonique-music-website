@@ -22,7 +22,9 @@ light gray 	#b3b3b3 */
     box-sizing: border-box;
     /* border: 1px solid white; */
 }
-
+a {
+    transition: all .15s ease-out;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -34,12 +36,16 @@ body {
     background-color: var(--primary-bg-color);
     animation: fade forwards 3s ease;
 }
-body > P {
+body > P,
+body p a {
     margin-top: 30px;
     text-align: center;
     font-size: 0.8rem;
     width: 500px;
     color: var(--light-gray-color);
+}
+body p a:active {
+    color: white;
 }
 section {
     display: flex;
@@ -67,11 +73,27 @@ form input {
     border: 1px var(--primary-bg-color) solid;
     font-size: 1rem;
     border-radius: 5px;
+    /* outline: var(--gray-color) 2px solid; */
+}
+form input[type="email"],
+form input[type="text"],
+form input[type="password"] {
+    outline: var(--gray-color) 2px solid;
+}
+form input[type="email"]:focus,
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    outline:#FF6A21 2px solid;
 }
 form input[type="submit"] {
     background-color: var(--primary-color);
     border: none;
     cursor: pointer;
+    transition: all .2s ease-out;
+}
+form input[type="submit"]:hover {
+    background-color: #fa6216;
+    scale: 1.05;
 }
 form .forgot {
     margin: 10px 0;
@@ -97,12 +119,19 @@ section .lower-part {
     color: var(--light-gray-color);
     font-weight: 500;
 }
-
+form a:hover,
+.lower-part > a:hover {
+    font-weight: 600;
+}
 section .social-container {
     display: flex;
-    /* flex-direction: column; */
     gap: 10px;
-
+}
+/* .social-container a {
+    transition: all .15s ease-out;
+} */
+.social-container a:hover {
+    background-color: var(--gray-color);
 }
 .social-container .socials {
     display: flex;
@@ -112,4 +141,45 @@ section .social-container {
     border: 2px solid var(--gray-color);
     border-radius: 50px;
     font-weight: 600;
+}
+
+.error-container, .error {
+    display: none;
+}
+
+.error-container.active {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
+
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

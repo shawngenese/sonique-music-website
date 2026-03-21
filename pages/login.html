@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | Sonique - Web Player</title>
+    <title>Login | Sonique - Web Player</title>
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/loginSignUp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
             <input type="email" name="" id="" placeholder="Email or username">
             <label for="">Password</label>
             <input type="password" name="" id="" placeholder="Password">
-            <a href="" class="forgot">Forgot password?</a>
+            <a href="#" class="forgot">Forgot password?</a>
             <input type="submit" value="login">
         </form>
         <div class="lower-part">
@@ -29,26 +29,55 @@
                 <hr style="width: 165px; height: 1px;">
             </div>
             <div class="social-container">
-                <a href="" class="socials">
+                <a class="socials">
                     <img src="../assets/images/google.png" alt="">
                 </a>
-                <a href="" class="socials">
+                <a class="socials">
                     <img src="../assets/images/apple-logo.png" alt="">
                 </a>
-                <a href="" class="socials">
+                <a class="socials">
                     <img src="../assets/images/facebook.png" alt="">
                 </a>
-                <a href="" class="socials">
-                    <img src="../assets/images/discord.png" alt="">
+                <a class="socials">
+                    <img src="../assets/images/snapchat.png" alt="">
                 </a>
             </div>
-            <p>Don't have an account? edi gumawa ka</p>
+            <p>Don't have an account?</p>
             <a href="signUp.html">Sign up</a>
         </div>
     </section>
     <p>
-        This login page is created for educational purposes only. <a href="">Terms and condition</a>.
-        You can login by just approaching the Admin of this website for approval. Thank you for your understanding.
+        This login page is created for educational purposes only. <a href="#">Terms and condition</a>.
+        All your information will only store in local storage. Thank you for your understanding.
     </p>
+    <div class="error-container">
+        <span class="error">
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4m-1.637-9.409L2.257 17.125a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636-2.87L13.637 3.59a1.914 1.914 0 0 0-3.274 0zM12 16h.01"/></svg>
+            <h1>Something went wrong.</h1>
+            <p>Sorry something went wrong there. Try again</p>
+        </span> 
+    </div>
+
+    <script>
+        const errorCon = document.querySelector(".error-container");
+        const errorMess = document.querySelector(".error");
+        const socials = document.querySelectorAll(".socials");
+        const forgot = document.querySelector(".forgot");
+
+        socials.forEach(social => {
+            social.addEventListener("click", () => {
+            errorCon.classList.toggle("active");
+            errorMess.classList.toggle("active");
+            });
+        });
+        forgot.addEventListener("click", () => {
+            errorCon.classList.toggle("active");
+            errorMess.classList.toggle("active");
+        });
+        errorCon.addEventListener("click", () => {
+            errorCon.classList.toggle("active");
+            errorMess.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
