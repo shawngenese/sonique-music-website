@@ -50,6 +50,7 @@ p,svg {
 }
 svg {
     cursor: pointer;
+    display: block;
 }
 
 aside svg:hover {
@@ -58,10 +59,10 @@ aside svg:hover {
 }
 html, body {
     scroll-behavior: smooth;
+    animation: fade forwards 1s ease-out;
 }
 body {
     min-height: 100dvh;
-    animation: fade forwards 3s ease;
     
     background-color: var(--main-bg-color);
     
@@ -270,6 +271,9 @@ aside {
     backdrop-filter: blur(5px);
     transition: all .3s ease-out;
 }
+aside .deviceBtn {
+    cursor: not-allowed;
+}
 
 svg.shuffleBtn.active,
 svg.loopBtn.active {
@@ -346,5 +350,12 @@ aside svg {
         transform: translateX(-100%);
     } to {
         transform: translateX(0);
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.9;
+    } to {
+        opacity: 1;
     }
 }
