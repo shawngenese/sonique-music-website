@@ -84,12 +84,17 @@ header {
     line-height: 2.5;
     font-weight: 700;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
     width: 55%;
-
+    padding-bottom: 50px;
 }
-
+.lyricsSource {
+    margin: 30px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 section.parent-section {
     /* width: 100%; */
     display: flex;

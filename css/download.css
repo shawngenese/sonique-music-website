@@ -82,7 +82,7 @@ nav .nav-menu li a:hover i{
     color: var(--primary-color);
     cursor: pointer;
 }
-nav .nav-menu li:hover:nth-child(3) {
+nav .nav-menu li:hover:nth-child(4) {
     all: unset;
 }
 .nav-menu .loginBtn {
@@ -118,7 +118,7 @@ nav .nav-menu.active {
     padding: 20px;
     transform: translateY(0);
 }
-nav .nav-menu.active :nth-child(3){
+nav .nav-menu.active :nth-child(4){
     display: none;
 }
 nav .hamburger-menu {

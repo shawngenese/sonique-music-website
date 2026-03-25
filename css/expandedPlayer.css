@@ -78,7 +78,7 @@ header {
     width: 100%;
 }
 header.parent-header{
-    background:linear-gradient(rgba(0, 0, 0, 0.6)), url("../assets/images/multo-cover.jpg");
+    background:linear-gradient(rgba(0, 0, 0, 0.65)), url("../assets/images/multo-cover.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;

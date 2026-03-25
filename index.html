@@ -23,11 +23,11 @@
             <h1>Sonique</h1>
         </div>
         <ul class="nav-menu">
+            <li><a href="">Home</a></li>
             <li><a href="pages/premium.html">Premium plans</a></li>
-            <!-- <li><a href="#">Support</a></li> -->
             <li><a href="pages/download.html">Download</a></li>
             <li><span>|</span></li>
-            <li><a href="#" class="installLink"><i class="uil uil-arrow-circle-down"></i> Install App</a></li>
+            <li><a href="#" class="support">Support</a></li>
             <li><a href="pages/signUp.html">Sign up</a></li>
             <a href="pages/login.html">
                 <button class="loginBtn">Login</button>
@@ -198,14 +198,14 @@
     <script>
         const hamburger = document.querySelector(".hamburger-menu");
         const navMenu = document.querySelector(".nav-menu");
-        const install = document.querySelector(".installLink");
+        const support = document.querySelector(".support");
         const errorCon = document.querySelector(".error-container");
         const errorMess = document.querySelector(".error");
 
         hamburger.addEventListener("click", () => {
             navMenu.classList.toggle("active");
         });
-        install.addEventListener("click", () => {
+        support.addEventListener("click", () => {
             errorCon.classList.toggle("active");
             errorMess.classList.toggle("active");
         });

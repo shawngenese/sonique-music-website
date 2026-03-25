@@ -25,9 +25,9 @@
         <ul class="nav-menu">
             <li><a href="../index.html">Home</a></li>
             <li><a href="premium.html">Premium plans</a></li>
-            <!-- <li><a href="#">Support</a></li> -->
+            <li><a href="">Download</a></li>
             <li><span>|</span></li>
-            <li><a href="#" class="installLink"><i class="uil uil-arrow-circle-down"></i> Install App</a></li>
+            <li><a href="#" class="support">Support</a></li>
             <li><a href="signUp.html">Sign up</a></li>
             <a href="login.html"><button class="loginBtn">Login</button></a>
         </ul>
@@ -169,11 +169,11 @@
             });
         });
 
-        const install = document.querySelector(".installLink");
+        const support = document.querySelector(".support");
         const errorCon = document.querySelector(".error-container");
         const errorMess = document.querySelector(".error");
         
-        install.addEventListener("click", () => {
+        support.addEventListener("click", () => {
             errorCon.classList.toggle("active");
             errorMess.classList.toggle("active");
         });

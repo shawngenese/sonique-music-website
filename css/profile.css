@@ -9,7 +9,6 @@
     --main-font: Montserrat, sans-serif;
     /* --secondary-font:  DM Serif Text, Tahoma; */
 }
-
 /* orange #FF6A21
 dark gray #212121
 super dark gray 	#121212
@@ -159,6 +158,7 @@ header {
     padding: 50px 25px;
     height: 70px;
     background-color: inherit;
+    z-index: 10;
 }
 /* .left-header {
     display: flex;
@@ -192,12 +192,48 @@ header input[type="text"] {
     width: 100%;
 }
 
-
 main {
     background-color: var(--secondary-bg-color);
     margin: 0 10px;
     border-radius: 30px;
-    padding: 10px;
+    padding: 30px;
+}
+
+.user-bg-picture {
+    position: relative;
+    background-color: var(--gray-color);
+    border-radius: 20px;
+    height: 300px;
+    margin-bottom: 70px;
+}
+.user-profile {
+    position: absolute;
+    bottom: -60px;
+    left: 60px;
+}
+.user-information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 30px;
+}
+.user-information .follows {
+    display: flex;
+    gap: 20px;
+}
+.follows span {
+    font-weight: 600;
+}
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+section.albums-section {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* galing kay google */
@@ -214,46 +250,6 @@ main {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
-}
-
-.playlist-preview {
-    margin: 0 0 50px 0;
-}   
-
-.playlist-preview img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 20px;
-}
-
-.albums-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.albums {
-    display: flex;
-    overflow: auto;
-    margin-bottom: 30px;
-}
-
-.albums img {
-    border-radius: 10px;
-    margin: 0px 5px 20px 5px;
-}
-
-.albums .cards {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-}
-.albums .cards:hover {
-    background-color: var(--primary-bg-color);
-    border-radius: 23px;
 }
 
 
