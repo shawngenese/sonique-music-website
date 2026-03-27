@@ -159,6 +159,7 @@ header {
     padding: 50px 25px;
     height: 70px;
     background-color: inherit;
+    z-index: 10;
 }
 /* .left-header {
     display: flex;
@@ -197,47 +198,64 @@ main {
     background-color: var(--secondary-bg-color);
     margin: 0 10px;
     border-radius: 30px;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* galing kay google */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 8px;
+    height: 10px;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
   /* background: #888;  */
   background: var(--primary-bg-color);
   cursor: pointer;
+  /* background: transparent; */
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+  /* background: transparent; */
 }
 
 .playlist-preview {
     margin: 0 0 50px 0;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 5rem;
+    font-weight: 550;
+    border-radius: 25px;
 }   
+.playlist-preview p {
+    font-family: tahoma;
+    color: var(--light-gray-color);
+    line-height: 0.9;
+}
 
 .playlist-preview img{
     width: 100%;
     height: 250px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     border-radius: 20px;
 }
 
-.albums-section {
+.albums-section,
+.artists-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.albums {
+.albums,
+.artists {
     display: flex;
     overflow: auto;
-    margin-bottom: 30px;
 }
 
 .albums img {
@@ -245,18 +263,73 @@ main {
     margin: 0px 5px 20px 5px;
 }
 
-.albums .cards {
+.albums .cards,
+.artists .cards {
+    position: relative;
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
+
+    transition: all 0.3s ease-out ;
+    margin-bottom: 10px;
 }
-.albums .cards:hover {
+.cards p:nth-child(2) {
+    font-weight: 600;
+}
+.cards p:nth-child(3) {
+    color: var(--light-gray-color);
+    font-weight: 500;
+}
+.albums .cards:hover,
+.artists .cards:hover {
     background-color: var(--primary-bg-color);
     border-radius: 23px;
 }
+.artists .cards img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
 
+    margin: 0px 5px 20px 5px;
+}
 
+.cards::after {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="white" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128"/></svg>');
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50px;
+    position: absolute;
+    right: 30px;
+    bottom: 90px;
+    background-color: var(--primary-color);
+    padding: 12px 14px 2px 12px;
+    
+}
+.artists .cards::after {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="M18.75 10.75V8h1.5v2.75H23v1.5h-2.75V15h-1.5v-2.75H16v-1.5zm-10.918 1.6C7.096 11.478 6.5 9.85 6.5 8.71V7a4 4 0 0 1 8 0v1.71c0 1.14-.6 2.773-1.332 3.642l-.361.428c-.59.699-.406 1.588.419 1.99l5.66 2.762c.615.3 1.114 1.093 1.114 1.783v.687a1 1 0 0 1-1.001.998H2a1 1 0 0 1-1-.998v-.687c0-.685.498-1.483 1.114-1.784l5.66-2.762c.821-.4 1.012-1.288.42-1.99z"/></svg>');
+    /* content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="white" d="M228 128a12 12 0 0 1-12 12h-76v76a12 12 0 0 1-24 0v-76H40a12 12 0 0 1 0-24h76V40a12 12 0 0 1 24 0v76h76a12 12 0 0 1 12 12"/></svg>'); */
+    padding: 10px 12px 4px 12px;
+}
+
+@keyframes slideIn {
+    from {
+        scale: 0;
+        opacity: 0;
+    } to {
+        scale: 1;
+        opacity: 1;
+    }
+  /* from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; } */
+}
+.cards:hover::after{
+      animation: slideIn 0.3s ease-out forwards;
+    display: flex;
+    cursor: pointer;
+}
 aside {
     position: fixed;
     /* left: 240px; */
