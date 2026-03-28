@@ -33,7 +33,9 @@ body {
 
     height: 100dvh;
     width: 100%;
+
     background-color: var(--primary-bg-color);
+
     animation: fade forwards 3s ease;
 }
 body > P,
@@ -50,30 +52,35 @@ body p a:active {
 section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 30px;
+
     width: 430px;
-    justify-content: center;
     padding: 50px 20px;
     border-radius: 25px;
+    
     background-color: var(--primary-bg-color);
 }
 section form {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 10px;
-        font-size: 1rem;
-        font-weight: 500;
+
+    width: 100%;
+
+    font-size: 1rem;
+    font-weight: 500;
 }
 form input {
     padding: 10px;
-    font-weight: 600;
-    background-color: var(--secondary-bg-color);
-    border: 1px var(--primary-bg-color) solid;
-    font-size: 1rem;
     border-radius: 5px;
-    /* outline: var(--gray-color) 2px solid; */
+    border: 1px var(--primary-bg-color) solid;
+
+    font-size: 1rem;
+    font-weight: 600;
+    
+    background-color: var(--secondary-bg-color);
 }
 form input[type="email"],
 form input[type="text"],
@@ -86,8 +93,9 @@ form input[type="password"]:focus {
     outline:#FF6A21 2px solid;
 }
 form input[type="submit"] {
-    background-color: var(--primary-color);
     border: none;
+    background-color: var(--primary-color);
+
     cursor: pointer;
     transition: all .2s ease-out;
 }
@@ -102,12 +110,13 @@ form .createAcc {
     margin: 10px 0;
 }
 section .lower-part {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    width: 100%;
 }
 .lower-part .or  {
     display: flex;
@@ -137,9 +146,11 @@ section .social-container {
     display: flex;
     align-items: center;
     gap: 10px;
+
     padding: 3px 20px;
     border: 2px solid var(--gray-color);
     border-radius: 50px;
+
     font-weight: 600;
 }
 
@@ -149,29 +160,34 @@ section .social-container {
 
 .error-container.active {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 20;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .error.active {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: var(--primary-bg-color);
+
     padding: 30px;
     border-radius: 10px;
-    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
 
+    text-align: center;
+    
+    background-color: var(--primary-bg-color);
     opacity: 0;
+
     animation: slideUp 0.5s ease-out forwards;
 }
 @keyframes slideUp {

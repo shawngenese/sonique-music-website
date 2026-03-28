@@ -179,11 +179,14 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     height: 80px;
     padding: 20px 10px;
     border-radius: 10px 10px 0 0;
+    
     background-color: rgba(0,0,0,0.9);
     backdrop-filter: blur(5px);
+
     transition: all .3s ease-out;
 
     animation: slideUp forwards ease 1s;
@@ -202,7 +205,7 @@ svg.loopBtn.active {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* border: 1px solid orange; */
+
     width: 300px;
 }
 
@@ -212,6 +215,7 @@ svg.loopBtn.active {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
     width: 400px;
 }
 
@@ -220,6 +224,7 @@ svg.loopBtn.active {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    
     width: 100%;
 }
 

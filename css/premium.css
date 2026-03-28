@@ -26,15 +26,12 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 nav li {
     list-style: none;
 }
-
 u {
     color: inherit;
 }
-
 html, body {
     scroll-behavior: smooth;
 }
@@ -50,14 +47,14 @@ nav {
     right: 0;
     z-index: 10;
     
-    height: 85px;
     display: flex;
     justify-content: space-between;
+    height: 85px;
     padding: 15px 30px;
+
     background-color: var(--main-bg-color);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 nav .logo {
     display: flex;
     align-items: center;
@@ -68,11 +65,11 @@ nav .logo {
 nav .logo h1 {
     font-size: clamp(2em, 2vw, 2.2em);
 }
-
 nav .nav-menu {
     display: flex;
     align-items: center;
     gap: 20px;
+
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -89,7 +86,6 @@ nav .nav-menu li a:hover i{
 nav .nav-menu li:hover:nth-child(4) {
     all: unset;
 }
-
 .nav-menu .loginBtn {
     padding: 10px 50px;
     background-color: var(--primary-color);
@@ -102,17 +98,14 @@ nav .nav-menu li:hover:nth-child(4) {
     cursor: pointer;
     transition: all .1s ease-out;
 }
-
 .nav-menu .loginBtn:hover {
     background-color: var(--primary-color);
     scale: 1.05;
 }
-
 .nav-menu .loginBtn:active {
     background-color: orangered;
     scale: 0.95;
 }
-
 nav .nav-menu.active {
     position: fixed;
     top: 70px;
@@ -128,7 +121,6 @@ nav .nav-menu.active {
 nav .nav-menu.active :nth-child(4){
     display: none;
 }
-
 nav .hamburger-menu {
     position: fixed;
     right: 10px;
@@ -165,75 +157,83 @@ main > p {
     animation: slideUp 1s ease-out forwards;
     animation-delay: 1.2s;
 }
-section {
+main section {
     display: flex;
     flex-wrap: wrap;
-    margin: 60px;
     justify-content: center;
     gap: 40px;
+
+    margin: 60px;
 }
 main .premium-box {
     position: relative;
-    background-color: var(--secondary-bg-color);
     padding: 50px 20px 60px 20px;
-    border-radius: 15px;
-    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
-    box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.3),  
-    0 8px 20px rgba(0, 0, 0, 0.25);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 5px;
     max-width: 390px;
-}
+    border-radius: 15px;
 
+    background-color: var(--secondary-bg-color);
+    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.3),  
+    0 8px 20px rgba(0, 0, 0, 0.25);
+}
 .premium-box.orange{
     opacity: 0;
     animation: slideUp 1s ease-out forwards;
     animation-delay: 1.4s;
 }
 .premium-box.violet{
-        opacity: 0;
+    opacity: 0;
     animation: slideUp 1s ease-out forwards;
     animation-delay: 1.6s;
 }
 .premium-box.yellow{
-        opacity: 0;
+    opacity: 0;
     animation: slideUp 1s ease-out forwards;
     animation-delay: 1.8s;
 }
 .premium-box.blue{
-        opacity: 0;
+    opacity: 0;
     animation: slideUp 1s ease-out forwards;
     animation-delay: 2s;
 }
-
 main .premium-box span {
     position: absolute;
     top: 0;
     left: 0;
+
     padding: 10px 20px;
-    background-color: var(--primary-color);
     border-radius: 15px 0 15px 0;
+
     font-weight: 500;
+
+    background-color: var(--primary-color);
 }
-.premium-title .logo {
+.premium-title {
     display: flex;
     align-items: center;
     gap: 5px;
+
+    margin: 8px 0;
+
     font-size: 1.1rem;
     font-weight: 600;
-    margin: 8px 0;
 }
 .premium-box h1 {
-    font-size: 2.7em;
     margin: 0 0 5px 0;
+
+    font-size: 2.7em;
     color: var(--primary-color);
 }
 .premium-box p {
-    font-size: 0.9rem;
     margin: 1px 0;
+
+    font-size: 0.9rem;
     font-weight: 600;
 }
 .premium-box .gray-text {
@@ -244,14 +244,16 @@ main .premium-box span {
     margin: 0 20px;
 }
 .premium-box button {
+    margin: 30px 0;
     padding: 10px 50px;
-    background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
 
     font-weight: 600;
     font-size: clamp(0.7rem, 2vw, 1rem);
-    margin: 30px 0;
+
+    background-color: var(--primary-color);
+
     cursor: pointer;
     transition: all .1s ease-out;
 }
@@ -287,35 +289,41 @@ section .premium-box.blue h1{
 section .premium-box.blue button {
     background-color: dodgerblue;
 }
+
 .error-container, .error {
     display: none;
 }
-
 .error-container.active {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 20;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .error.active {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: var(--primary-bg-color);
+
     padding: 30px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
+    text-align: center;
+
+    background-color: var(--primary-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     opacity: 0;
+
     animation: slideUp 0.5s ease-out forwards;
 }
 
@@ -326,46 +334,40 @@ footer {
 footer li {
     list-style: none;
 }
-
 footer .container,
 footer .last-container {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
 }
-
 footer .container .footer-containers.logo {
     display: flex;
 }
-
 footer .container .footer-containers.logo h1 {
     margin: 1px 0 0 5px;
     font-weight: 600;
     font-size: 1.4rem;
 }
-
 footer .footer-containers p{
     color: gray;
 }
-
 footer .footer-containers li{
     margin: 15px 0;
 }
-
 footer .footer-containers li:hover,
 footer .last-container li:hover{
     color: var(--primary-color);
     cursor: pointer;
 }
-
 footer svg {
-    background-color: var(--secondary-bg-color);
+    margin: 5px;
     padding: 10px;
     border-radius: 50px;
-    cursor: pointer;
-    margin: 5px;
-}
 
+    background-color: var(--secondary-bg-color);
+
+    cursor: pointer;
+}
 footer .last-container ul {
     display: flex;
     flex-wrap: wrap;
@@ -415,8 +417,6 @@ footer .last-container ul {
   footer {
     padding: 20px;
   }
-
-
 }
 @media (max-width: 1128px) {
     .panel1 img {

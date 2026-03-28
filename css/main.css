@@ -29,17 +29,16 @@ a {
 li {
     list-style: none;
 }
-
 u {
     color: inherit;
 }
-
 html, body {
     scroll-behavior: smooth;
 }
 body {
     height: 100dvh;
     width: 100%;
+
     animation: fade forwards 3s ease;
 }
 nav {
@@ -49,10 +48,11 @@ nav {
     right: 0;
     z-index: 10;
     
-    height: 85px;
     display: flex;
     justify-content: space-between;
+    height: 85px;
     padding: 15px 30px;
+
     background-color: var(--main-bg-color);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -70,6 +70,7 @@ nav .nav-menu {
     display: flex;
     align-items: center;
     gap: 20px;
+
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -87,12 +88,13 @@ nav .nav-menu li:hover:nth-child(4) {
 }
 .nav-menu .loginBtn {
     padding: 10px 50px;
-    background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
-
+    
     font-weight: 600;
     font-size: 1.2rem;
+    
+    background-color: var(--primary-color);
 
     cursor: pointer;
     transition: all .1s ease-out;
@@ -105,17 +107,19 @@ nav .nav-menu li:hover:nth-child(4) {
     background-color: orangered;
     scale: 0.95;
 }
-
 nav .nav-menu.active {
     position: fixed;
     top: 70px;
     left: 0;
     right: 0;
+
     display: flex;
     flex-direction: column;
-    background-color: black;
     width: 100%;
     padding: 10px;
+    
+    background-color: black;
+
     transform: translateY(0);
 }
 nav .nav-menu.active :nth-child(4){
@@ -124,10 +128,13 @@ nav .nav-menu.active :nth-child(4){
 nav .hamburger-menu {
     position: fixed;
     right: 10px;
+
     display: none;
-    background-color: transparent;
     border: none;
+
     font-size: 2em;
+
+    background-color: transparent;
 }
 
 main {
@@ -137,6 +144,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
     margin-top: 84px;
     padding: 130px 60px;
 
@@ -154,13 +162,15 @@ main {
 }
 .panel1 button {
     padding: 10px 50px;
-    background-color: var(--primary-color);
+    margin: 30px 0;
     border: none;
     border-radius: 30px;
 
     font-weight: 600;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
-    margin: 30px 0;
+
+    background-color: var(--primary-color);
+
     cursor: pointer;
     transition: all .1s ease-out;
 }
@@ -183,41 +193,37 @@ main {
     animation: rightToLeft forwards 1s ease-out;
     animation-delay: 1s;
 }
-
-
-
-/* temporary lang to */
-
 .panel1 h1 {
     opacity: 0;
-  animation: slideUp 1s ease-out forwards;
-  animation-delay: 0.8s;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.8s;
 }
 .panel1 button {
-        opacity: 0;
-  animation: slideUp 1s ease-out forwards;
-  animation-delay: 1.2s;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 1.2s;
 }
 .panel1 p {
     opacity: 0;
-  animation: slideUp 1s ease-out forwards;
-  animation-delay: 1.6s;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 1.6s;
 }
-
 .panel2 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
     gap: 40px;
+    
     padding: 150px 60px 150px 60px;
+
+    text-align: center;
+
     background-color: var(--primary-color);
-    /* background: #212121;
-    background: linear-gradient(271deg,rgba(33, 33, 33, 1) 0%, rgba(0, 0, 0, 1) 100%); */
 }
 .panel2 h2 {
     font-size: clamp(2em, 3vw, 4em);
+
     animation: slideUp linear forwards;
     animation-timeline: view();
     animation-range: entry 30% cover 40%;
@@ -230,8 +236,6 @@ main {
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
 }
-
-
 .panel3 {
     display: flex;
     flex-direction: column;
@@ -253,38 +257,39 @@ main {
     margin-bottom: 50px;
 }
 .panel3 .description-images {
-    opacity: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 60px;
     align-items: center;
+    gap: 60px;
+    
     margin: 20px 0;
+    padding: 20px;
+    border-radius: 40px;
+    
+    background-color: var(--secondary-bg-color);
+    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.3),  
+    0 8px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0;
 
     animation: slideUp linear forwards;
     animation-timeline: view();
     animation-range: entry 40% cover 50%;
-
-    background-color: var(--secondary-bg-color);
-
-        padding: 20px;
-        border-radius: 40px;
-        box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
-        box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.3),  
-        0 8px 20px rgba(0, 0, 0, 0.25);
 }
 .panel3 .description-images .description {
-    flex-basis: 600px;
-    flex-grow: 1;  
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-basis: 600px;
+    flex-grow: 1;  
     gap: 10px;
 }
 .panel3 .description-images img {
     width: 100%;
     border-radius: 30px;
+
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .panel3 .description-images.alternate {
@@ -292,17 +297,8 @@ main {
 }
 .panel3 .description-images .description,
 .panel3 .description-images img {
-  animation: slideUp 0.8s ease forwards;
+    animation: slideUp 0.8s ease forwards;
 }
-/* .panel3 .description-images .description { animation-delay: 0.3s; }
-.panel3 .description-images img { animation-delay: 0.6s; }
-.panel3 .description-images img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4),
-              0 0 15px rgba(255,106,33,0.2);
-  transition: all 0.3s ease;
-} */
-
 .panel4 {
     background-color: var(--secondary-bg-color);
     padding: 100px 50px;
@@ -338,20 +334,19 @@ main {
     margin: 100px 30px;
 }
 .panel4-container .box {
- /* Suggests a base width; items can grow or shrink */
     flex-basis: 200px;
     flex-grow: 1;  
 
     width: 290px;
-    font-size: 1.2rem;
-        font-size: clamp(0.9rem, 2vw, 1.2rem);
-    background-color: var(--secondary-bg-color);
-    border-radius: 20px;
     padding: 20px 30px;
-    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
-        box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.3),   /* subtle base shadow */
-        0 8px 20px rgba(0, 0, 0, 0.25); /* wider, softer glow */
+    border-radius: 20px;
+
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    
+    background-color: var(--secondary-bg-color);
+    box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.25);
 
     animation: slideUp linear forwards;
     animation-timeline: view();
@@ -362,14 +357,16 @@ main {
     margin: 10px 0;
 }
 .panel4 button {
+    margin: 30px 0;
     padding: 10px 50px;
-    background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
-
+    
     font-weight: 600;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
-    margin: 30px 0;
+    
+    background-color: var(--primary-color);
+
     cursor: pointer;
     transition: all .1s ease-out;
 
@@ -395,7 +392,6 @@ main {
 .error-container, .error {
     display: none;
 }
-
 .error-container.active {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
@@ -428,14 +424,12 @@ footer {
     background-color: black;
     padding: 50px 100px 50px 100px;
 }
-
 footer .container,
 footer .last-container {
     display: flex;
     justify-content: space-between;
     font-weight: 500;
 }
-
 footer .container .footer-containers.logo {
     display: flex;
 }
@@ -508,8 +502,6 @@ footer .last-container ul {
   footer {
     padding: 20px;
   }
-
-
 }
 @media (max-width: 1128px) {
   /* Styles for screens wider than 1024px (e.g., large tablets landscape, desktops) */
