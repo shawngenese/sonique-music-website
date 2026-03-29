@@ -152,9 +152,7 @@ aside.nav-active {
     font-weight: 600;
 }
 
-
 header {
-
     position: sticky;
     top: 0;
     z-index: 10;
@@ -163,25 +161,34 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 50px 25px;
+    padding: 40px 25px;
     height: 70px;
 
     background-color: inherit;
 }
-/* .left-header {
+.pageHeader {
+    width: 400px;
+}
+ .left-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--secondary-bg-color);
+
+    flex: 1;
     padding: 10px 15px;
-    border-radius: 50px;
     width: 50%;
+    border-radius: 50px;
+
+    background-color: var(--secondary-bg-color);
 }
 .left-header.active {
     border: 1px solid var(--light-gray-color);
-} */
+}
+
 .right-header {
     display: flex;
+    width: 410px;
+    justify-content: right;
     gap: 20px;
 }
 .right-header svg:hover {
@@ -193,97 +200,179 @@ header {
     fill: orangered;
 }
 header input[type="text"] {
-    border: none;
-    font-size: 1.1rem;
-    background: none;
-    outline: none;
     width: 100%;
+    border: none;
+
+    font-size: 1.1rem;
+
+    outline: none;
+    background: none;
 }
+
+/* main {
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 30px;
+
+    background-color: var(--secondary-bg-color);
+} */
 
 main {
-    background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin: 0 10px;
     border-radius: 30px;
-    padding: 15px;
+    
 }
-
-.user-bg-picture {
+section {
+    background-color: var(--secondary-bg-color);
+    border-radius: 30px;
+}
+.artist-preview {
+    flex: 1;
+    padding: 10px;
+}
+.artist-preview > h1 {
+    margin: 20px 10px;
+}
+.artist-preview .artist-cover {
     position: relative;
-
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
     height: 300px;
-    margin-bottom: 70px;
-
-    background-color: var(--gray-color);
+    background-color: var(--primary-bg-color);
+    border-radius: 20px;
+    filter: brightness(80%);
+    background-position: center;
 }
-.user-profile {
+.artist-preview .texts {
     position: absolute;
-    bottom: -60px;
-    left: 60px;
-}
-.user-information {
+    top: 50px;
+    left: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-
-    margin: 50px 30px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid var(--gray-color);
-}
-.user-personal-information {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.edit-user-information {
-    display: flex;
-}
-.user-information a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 5px 10px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 8px;
-
-    font-size: 0.9rem;
-    font-weight: 500;
-    
-    background-color: var(--primary-color);
-    
-    cursor: pointer;
-    transition: all .3s ease-out;
-}
-.user-information a:hover {
-    scale: 1.05;
-}
-.user-information a:active {
-    scale: 1;
-}
-.user-information .follows {
-    display: flex;
     gap: 20px;
 }
-.follows span {
-    font-weight: 600;
+.texts h1 {
+    font-size: 5rem;
 }
-.user-name {
+.texts img {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.texts span p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.album-navigation {
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 30px 10px 0 15px;
+    gap: 20px;
 }
-.user-name p {
-    color: var(--light-gray-color);
+.album-navigation button {
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
-/* section.albums-section {
-    margin: 30px;
+.album-navigation button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+.album-navigation button:active {
+    scale: 1.08;
+}
+.album-navigation svg.play {
+    height: 70px;
+    width: 70px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+}
+.album-navigation svg:hover {
+    background-color: var(--gray-color);
+    border-radius: 10px;
+}
+.song {
+    margin: 10px 0;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-} */
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray-color);
+}
+.song-number {
+    width: 120px;
+}
+.song-card .song-title .number {
+    width: 25px;
+}
+.song-title {
+    flex: 1;
+}
+.song-title .title {
+    font-size: 1.1rem;
+}
+.song-album {
+    width: 300px;
+}
+.song .song-duration,
+.song-card .song-duration {
+    width: 300px;
+    text-align: left;
+}
+.song-listeners {
+    width: 200px;
+}
+.song-card svg {
+    display: flex;
+    margin: 0 35px;
+}
+.song-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    transition: all 0.3s ease-out;
+}
+.song-card:hover {
+    background-color: var(--primary-bg-color);
+    border-radius: 15px;
+}
+svg.btnPlay {
+    display: none;
+    margin: 0;
+    transition: all .3s ease-out;
+}
+.song-card:hover .song-title .number {
+    display: none;
+}
+.song-card:hover svg.btnPlay {
+    display: block;
+}
+.song-card .song-title {
+    font-weight: 600;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    cursor: pointer;
+}
+.song-card .song-title img {
+    border-radius: 10px;
+}
+
+
 
 /* galing kay google */
 ::-webkit-scrollbar {
@@ -293,7 +382,7 @@ main {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   /* background: #888;  */
-  background: var(--primary-bg-color);
+  /* background: var(--primary-bg-color); */
   cursor: pointer;
   background: transparent;
 }
@@ -303,18 +392,16 @@ main {
   background: transparent;
 }
 
-.albums-section,
-.artists-section {
+.albums-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    margin: 30px;
+    padding: 20px;
 }
-.albums,
-.artists {
+.albums {
     display: flex;
     overflow: auto;
+
 }
 .albums img {
     border-radius: 10px;
@@ -347,14 +434,13 @@ main {
 }
 .artists .cards img {
     margin: 0px 5px 20px 5px;
+    border-radius: 50%;
 
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
 }
 .cards::after {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="white" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128"/></svg>');
-    
     position: absolute;
     right: 30px;
     bottom: 90px;
@@ -367,7 +453,7 @@ main {
     border-radius: 50px;
 
     font-size: 2rem;
-    
+
     background-color: var(--primary-color);
 }
 .artists .cards::after {
@@ -385,11 +471,10 @@ main {
     }
 }
 .cards:hover::after{
-      animation: slideIn 0.3s ease-out forwards;
+    animation: slideIn 0.3s ease-out forwards;
     display: flex;
     cursor: pointer;
 }
-
 
 aside {
     position: fixed;
@@ -467,6 +552,7 @@ input[type="range"] {
 aside svg {
     height: 25px;
 }
+
 @keyframes toggleMenu {
     from {
         transform: translateX(-100%);

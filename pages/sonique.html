@@ -73,90 +73,90 @@
 
             <h1>Recently Album Played</h1>
             <div class="albums">
-                <a class="cards">
+                <a onclick="showAlbum('CLAPCLAPCLAP!', 'IV of Spades')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-21.jpg" alt="" height="250">
                     <p>CLAPCLAPCLAP!</p>
                     <p>IV OF SPADES</p>
                 </a>
-                <a class="cards">
+                <a onclick="showAlbum('we fell in love in october', 'Girl in Red')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-01.jpg" alt="" height="250">
                     <p>we fell in love in october</p>
                     <p>Girl in Red</p>
                 </a>
-                <div class="cards">
+                <a onclick="showAlbum('Pony', 'Rex Orange Country')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-02.jpg" alt="" height="250">
                     <p>Pony</p>
                     <p>Rex Orange Country</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Circus', 'Eraserheads')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-03.jpg" alt="" height="250">
                     <p>Circus</p>
                     <p>Eraserheads</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Noon Time Show', 'Itchyworms')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-04.jpg" alt="" height="250">
                     <p>Noon Time Show</p>
                     <p>Itchyworms</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Fuschiang Pag-Ibig', 'Silent Sanctuary')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-05.jpg" alt="" height="250">
                     <p>Funshiang Pag-Ibig</p>
                     <p>Silent Sanctuary</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('The Script', 'The Script')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-06.jpg" alt="" height="250">
                     <p>The Script</p>
                     <p>2008 · The Script</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Brand New Eyes', 'Paramore')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-07.jpg" alt="" height="250">
                     <p>Brand New Eyes</p>
                     <p>Paramore</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('A Beautiful Blur', 'LANY')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-20.jpg" alt="" height="250">
                     <p>A Beautiful Blur</p>
                     <p>LANY</p>
-                </div>
+                </a>
             </div>
 
             <h1>Popular Albums</h1>
             <div class="albums">
-                <div class="cards">
+                <a onclick="showAlbum('Hatful of Hollow', 'The Smiths')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" height="250">
                     <p>Hatful of Hollow</p>
                     <p>The Smiths</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Kid Krow', 'Conan Gray')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" height="250">
                     <p>Kid Krow</p>
                     <p>Conan Gray</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Harry\'s House', 'Harry Styles')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-10.jpg" alt="" height="250">
                     <p>Harry's House</p>
                     <p>Harry Styles</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
                     <p>Fearless (Taylor's Version)</p>
                     <p>Taylor Swift</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
                     <p>Speak Now (Taylor's Version)</p>
                     <p>Taylor Swift</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a  onclick="showAlbum('Doo-Wops & Hooligans', 'Bruno Mars')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
                     <p>Doo-Wops & Hooligans</p>
                     <p>Bruno Mars</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showAlbum('SOS', 'SZA')" class="cards">
                     <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
                     <p>SOS</p>
                     <p>SZA</p>
-                </div>
+                </a>
             </div>
 
             <h1>Popular Singles</h1>
@@ -216,11 +216,11 @@
         <section class="artists-section">
             <h1>Popular Artists</h1>
             <div class="artists">
-                <div class="cards">
+                <a onclick="showArtist('IV of Spades')" class="cards">
                     <img src="../assets/images/artists/artist-cover-10.jpg" alt="" height="250" width="250">
                     <p>IV OF SPADES</p>
                     <p>Artist</p>
-                </div>
+                </a>
                 <div class="cards">
                     <img src="../assets/images/artists/artist-cover-01.jpg" alt="" height="250" width="250">
                     <p>Arthur Nery</p>
@@ -301,6 +301,8 @@
     </aside>
         
     <script src="../js/musicPlayer.js"></script>
+    <script src="../js/showAlbum.js"></script>
+    <script src="../js/showArtist.js"></script>
     <script>
         const showNav = document.querySelector(".menuToggleBtn");
         const nav = document.querySelector("nav");
