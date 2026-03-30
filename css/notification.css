@@ -25,6 +25,7 @@ light gray 	#b3b3b3 */
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 li {
     list-style: none;
@@ -82,7 +83,7 @@ nav {
 
     transition: width 0.3s ease;
 }
-nav .logo {
+nav .upper .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,6 +169,7 @@ header {
 .left-header h1 {
 
 }
+
 .left-header {
     display: flex;
     align-items: center;
@@ -209,157 +211,120 @@ main {
 
     background-color: var(--secondary-bg-color);
 }
-main > h1, main > p {
-    margin: 10px;
-
-    text-align: center;
-    opacity: 0;
-    
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 0.4s;
-}
-main > h1 {
-    font-size: 3rem;
-}
-main > p {
-    font-size: 1.2rem;
-}
-section {
+section.notification-filter {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-
-    margin: 60px 0;
-}
-.premium-box {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
+    padding: 10px 30px 30px 30px;
+    border-bottom: 1px solid var(--gray-color);
 
-    width: 390px;
-    padding: 50px 20px 60px 20px;
-    border-radius: 15px;
+}
+.notification-filter .markRead {
+    font-weight: 600;
+    text-decoration: underline;
+}
+.notification-type a {
+    margin: 0 10px;
+    padding: 5px 15px;
 
-    background-color: var(--secondary-bg-color);
-    box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px;
-    box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.3),  
-    0 8px 20px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 1.1rem;
+
+    transition: all 0.2s ease;
+}
+.notification-type a:hover {
+    background-color: var(--gray-color);
+    border-radius: 50px;
+}
+.notification-type a.active {
+    border-radius: 50px;
+
+    color: black;
+    font-weight: 600;
+
+    background-color: white;
+}
+.notification-type a span {
+    padding: 2px 5px;
+    
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    
+    border-radius: 8px;
 }
 
-.premium-box.orange{
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 0.8s;
+.notification-container {
+    margin: 20px 0;
 }
-.premium-box.violet{
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.2s;
-}
-.premium-box.yellow{
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.4s;
-}
-.premium-box.blue{
-    opacity: 0;
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1.6s;
-}
+.notification-header {
+    display: flex;
+    justify-content: space-between;
 
-.premium-box span {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    padding: 10px 20px;
-    border-radius: 15px 0 15px 0;
+    padding: 0 20px;
 
     font-weight: 500;
-
-    background-color: var(--primary-color);
+    font-size: 1.1rem;
 }
-section .premium-box .premium-title .logo {
+.notification-container h2 {
+    margin: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray-color);
+}
+.notification-box {
     display: flex;
     align-items: center;
-    gap: 5px;
 
-    margin: 8px 0;
-
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-.premium-box.orange h1 {
-    font-size: 2.7em;
-    margin: 0 0 5px 0;
-    color:  var(--primary-color);
-}
-.premium-box p {
-    font-size: 0.9rem;
-    margin: 1px 0;
-    font-weight: 600;
-}
-.premium-box .gray-text {
-    font-weight: 500;
-    color: var(--light-gray-color);
-}
-.premium-box li {
-    margin: 0 20px;
-}
-.premium-box button {
-    margin: 30px 0;
-    padding: 10px 50px;
-    border: none;
-    border-radius: 30px;
+    padding: 20px;
     
-    font-weight: 600;
-    font-size: clamp(0.7rem, 2vw, 1rem);
-
-    background-color: var(--primary-color);
-
+    transition: all 0.2s ease-out;
     cursor: pointer;
-    transition: all .1s ease-out;
 }
-.premium-box button:hover {
-    opacity: 0.93;
-    scale: 1.03;
-}
-.premium-box button:active {
-    scale: 0.98;
-}
-.premium-box .premium-description {
-    font-size: 0.8rem;
-    font-weight: 500;
+.notification-box .logo svg.read,
+.notification-box .logo .name .read,
+.notification-box .time .read,
+.notification-box .date .read,
+.notification-box .more svg.read {
     color: var(--light-gray-color);
-    max-width: 350px;
+    fill: var(--light-gray-color);
 }
-section .premium-box.violet h1{
-    color: violet;
+.notification-box .more svg:hover {
+    /* fill: var(--primary-color); */
+    background-color: var(--gray-color);
+    border-radius: 5px;
 }
-section .premium-box.violet span,
-section .premium-box.violet button {
-    background-color: violet;
+.notification-box:hover {
+    background-color: var(--primary-bg-color);
+    border-radius: 15px;
 }
-section .premium-box h1{
-    color: yellowgreen;
+section .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    width: 50%;
 }
-section .premium-box.yellow span,
-section .premium-box.yellow button {
-    background-color: yellowgreen;
+.time,
+.date,
+.more {
+    width: 20%;
+    display: flex;
+    justify-content: center;
 }
-section .premium-box.blue h1{
-    color: dodgerblue;
-}
-section .premium-box.blue span,
-section .premium-box.blue button {
-    background-color: dodgerblue;
+.more {
+    justify-content: right;
 }
 
+/* 
+.notification-header .notif {
+    flex: 1;
+}
+.notification-header .time,
+.notification-header .date {
+    width: 473px;
+}
+.notification-header .more {
+    margin-right: 15px;
+} */
 .load-container.active {
     position: fixed;
     top: 0;

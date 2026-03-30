@@ -461,6 +461,38 @@ svg.btnPlay {
     padding: 10px 12px 4px 12px;
 }
 
+.load-container.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.loader.active {
+    display: inline-block;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-bottom-color: var(--primary-color);
+    
+    animation: rotation 0.7s linear infinite;
+}
+
+.cards:hover::after{
+    animation: slideIn 0.3s ease-out forwards;
+    display: flex;
+    cursor: pointer;
+}
 @keyframes slideIn {
     from {
         scale: 0;
@@ -470,30 +502,25 @@ svg.btnPlay {
         opacity: 1;
     }
 }
-.cards:hover::after{
-    animation: slideIn 0.3s ease-out forwards;
-    display: flex;
-    cursor: pointer;
-}
 
 aside {
     position: fixed;
     left: 110px;
     right: 10px;
     bottom: 0;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     height: 80px;
     padding: 20px 10px;
     border-radius: 10px 10px 0 0;
-
+    
     background-color: black;
     background-color: rgba(0,0,0,0.9);
     backdrop-filter: blur(5px);
-
+    
     transition: all .3s ease-out;
 }
 aside .deviceBtn {
@@ -508,7 +535,7 @@ svg.loopBtn.active {
     display: flex;
     align-items: center;
     gap: 10px;
-
+    
     width: 300px;
 }
 .player-aside {
@@ -517,7 +544,7 @@ svg.loopBtn.active {
     justify-content: center;
     align-items: center;
     gap: 10px;
-
+    
     width: 400px;
 }
 .current-time {
@@ -525,7 +552,7 @@ svg.loopBtn.active {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-
+    
     width: 100%;
 }
 .player-buttons {
@@ -565,5 +592,13 @@ aside svg {
         opacity: 0.9;
     } to {
         opacity: 1;
+    }
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
