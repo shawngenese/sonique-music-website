@@ -26,7 +26,6 @@
 header {
     position: sticky;
     top: 0;
-    z-index: 10;
 
     display: flex;
     justify-content: space-between;
@@ -43,8 +42,8 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    width: 50%;
     padding: 10px 15px;
+    width: 50%;
     border-radius: 50px;
 
     background-color: var(--secondary-bg-color);
@@ -74,116 +73,78 @@ header input[type="text"] {
 
 main {
     margin: 0 10px;
-    padding: 20px 10px;
+    padding: 10px;
     border-radius: 30px;
 
     background-color: var(--secondary-bg-color);
 }
-section.notification-filter {
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.queue-navigations{
     position: sticky;
     top: 100px;
-    z-index: 10;
+    z-index: 20;
     background-color: var(--secondary-bg-color);
     display: flex;
-    justify-content: space-between;
-    /* padding: 10px 30px 30px 30px; */
+    justify-content: left;
     border-radius: 10px;
-    padding: 30px;
-    border-bottom: 2px solid var(--gray-color);
+    /* margin: 20px; */
+    padding: 25px;
+    border-bottom: 2px solid var(--gray-color) ;
+}
 
-}
-.notification-filter .markRead {
+.queue-navigations a {
     font-weight: 600;
-    text-decoration: underline;
-}
-.notification-type a {
+    font-size: 1rem;
+    padding: 8px 12px;
     margin: 0 10px;
-    padding: 5px 15px;
+    border-radius: 25px;
 
-    font-weight: 400;
-    font-size: 1.1rem;
-
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
-.notification-type a:hover {
+.queue-navigations a:hover {
     background-color: var(--gray-color);
-    border-radius: 50px;
+    
 }
-.notification-type a.active {
-    border-radius: 50px;
-
-    color: black;
-    font-weight: 600;
-
+.queue-navigations a.active {
     background-color: white;
+    color: black;
 }
-.notification-type a span {
-    padding: 2px 5px;
-    
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 0.9rem;
-    
-    border-radius: 8px;
+.queue-container h2 {
+    margin: 30px 10px 10px 20px;
 }
-
-.notification-container {
-    margin: 20px 0;
-}
-.notification-header {
+.song-card {
     display: flex;
     justify-content: space-between;
-
-    padding: 0 20px;
-
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-.notification-container h2 {
-    margin: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--gray-color);
-}
-.notification-box {
-    display: flex;
     align-items: center;
+    padding: 10px;
 
-    padding: 20px;
-    
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
-.notification-box .logo svg.read,
-.notification-box .logo .name .read,
-.notification-box .time .read,
-.notification-box .date .read,
-.notification-box .more svg.read {
-    color: var(--light-gray-color);
-    fill: var(--light-gray-color);
-}
-.notification-box .more svg:hover {
-    /* fill: var(--primary-color); */
-    background-color: var(--gray-color);
-    border-radius: 5px;
-}
-.notification-box:hover {
-    background-color: var(--primary-bg-color);
-    border-radius: 15px;
-}
-section .logo {
+.song-card .song-logo {
     display: flex;
     align-items: center;
+    flex: 1;
+}
+.song-card:hover {
+    background-color: var(--primary-bg-color);
+    border-radius: 20px;
+}
+.song-album, .song-duration {
+    width: 350px;
+}
+.song-logo {
     gap: 20px;
-    
-    width: 50%;
+    font-weight: 600;
 }
-.time,
-.date,
-.more {
-    width: 20%;
-    display: flex;
-    justify-content: center;
+.song-card .song-logo h3 {
+    margin: 0 10px;
 }
-.more {
-    justify-content: right;
+.song-logo img {
+    border-radius: 10px;
 }
+

@@ -22,6 +22,9 @@
     box-sizing: border-box;
     /* border: 1px solid var(--primary-color); */
 }
+#gym\/workout {
+    scroll-margin-top: 400px;
+}
 
 header {
     position: sticky;
@@ -85,163 +88,53 @@ main {
     flex-direction: column;
     gap: 10px;
     margin: 0 10px;
-    border-radius: 30px;
-    
+    border-radius: 30px;    
 }
 section {
+    flex: 1;
     background-color: var(--secondary-bg-color);
     border-radius: 30px;
-}
-.artist-preview {
-    flex: 1;
     padding: 10px;
 }
-.artist-preview > h1 {
-    margin: 20px 10px;
-}
-.artist-preview .artist-cover {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    height: 300px;
-    background-color: var(--primary-bg-color);
-    border-radius: 20px;
-    filter: brightness(80%);
-    background-position: center;
-}
-.artist-preview .texts {
-    position: absolute;
-    top: 50px;
-    left: 40px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.texts h1 {
-    font-size: 5rem;
-}
-.texts img {
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.texts span p {
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-.album-navigation {
-    display: flex;
-    align-items: center;
-    padding: 30px 10px 0 15px;
-    gap: 20px;
-}
-.album-navigation button {
-    border: 2px solid white;
-    background-color: transparent;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 700;
+.playlists-navigations{
+    position: sticky;
+    top: 80px;
+    z-index: 20;
 
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    justify-content: left;
+    border-radius: 10px;
+    /* margin: 20px; */
+    padding: 25px;
+    border-bottom: 2px solid var(--gray-color) ;
 }
-.album-navigation button:hover {
+.playlists-navigations a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    margin: 0 10px;
+    border-radius: 25px;
+
+    transition: all 0.3s ease;
+}
+.playlists-navigations a:hover {
+    background-color: var(--gray-color);
+    
+}
+.playlists-navigations a.active {
     background-color: white;
     color: black;
-    border: 2px solid white;
 }
-.album-navigation button:active {
-    scale: 1.08;
-}
-.album-navigation svg.play {
-    height: 70px;
-    width: 70px;
-    padding: 15px;
-    border-radius: 50px;
-    background-color: var(--primary-color);
-}
-.album-navigation svg:hover {
-    background-color: var(--gray-color);
-    border-radius: 10px;
-}
-.song {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid var(--gray-color);
-}
-.song-number {
-    width: 120px;
-}
-.song-card .song-title .number {
-    width: 25px;
-}
-.song-title {
-    flex: 1;
-}
-.song-title .title {
-    font-size: 1.1rem;
-}
-.song-album {
-    width: 300px;
-}
-.song .song-duration,
-.song-card .song-duration {
-    width: 300px;
-    text-align: left;
-}
-.song-listeners {
-    width: 200px;
-}
-.song-card svg {
-    display: flex;
-    margin: 0 35px;
-}
-.song-card {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-
-    transition: all 0.3s ease-out;
-}
-.song-card:hover {
-    background-color: var(--primary-bg-color);
-    border-radius: 15px;
-}
-svg.btnPlay {
-    display: none;
-    margin: 0;
-    transition: all .3s ease-out;
-}
-.song-card:hover .song-title .number {
-    display: none;
-}
-.song-card:hover svg.btnPlay {
-    display: block;
-}
-.song-card .song-title {
-    font-weight: 600;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-
-    cursor: pointer;
-}
-.song-card .song-title img {
-    border-radius: 10px;
-}
-
-.albums-section {
+.albums-section,
+.artists-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
-.albums {
+.albums,
+.artists {
     display: flex;
     overflow: auto;
 
@@ -256,10 +149,11 @@ svg.btnPlay {
 
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: left;
 
     padding: 15px;
     margin-bottom: 10px;
+    height: fit-content;
 
     transition: all 0.3s ease-out ;
 }
@@ -282,6 +176,9 @@ svg.btnPlay {
     object-fit: cover;
     object-position: center;
 }
+.cards img {
+    object-fit: cover;
+}
 .cards::after {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="white" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128"/></svg>');
     position: absolute;
@@ -299,14 +196,13 @@ svg.btnPlay {
 
     background-color: var(--primary-color);
 }
+
 .artists .cards::after {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="white" fill-rule="evenodd" d="M18.75 10.75V8h1.5v2.75H23v1.5h-2.75V15h-1.5v-2.75H16v-1.5zm-10.918 1.6C7.096 11.478 6.5 9.85 6.5 8.71V7a4 4 0 0 1 8 0v1.71c0 1.14-.6 2.773-1.332 3.642l-.361.428c-.59.699-.406 1.588.419 1.99l5.66 2.762c.615.3 1.114 1.093 1.114 1.783v.687a1 1 0 0 1-1.001.998H2a1 1 0 0 1-1-.998v-.687c0-.685.498-1.483 1.114-1.784l5.66-2.762c.821-.4 1.012-1.288.42-1.99z"/></svg>');
     padding: 10px 12px 4px 12px;
 }
-
 .cards:hover::after{
     animation: slideIn 0.3s ease-out forwards;
     display: flex;
     cursor: pointer;
 }
-

@@ -1,0 +1,126 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+
+u {
+    color: inherit;
+}
+p,svg {
+    transition: all .3s ease;
+    fill: white;
+}
+svg {
+    cursor: pointer;
+    display: block;
+}
+aside svg:hover {
+    background-color: var(--gray-color);
+    border-radius: 5px;
+}
+html, body {
+    scroll-behavior: smooth;
+    animation: fade forwards 1s ease-out;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100dvh;
+    margin-left: 100px;
+    margin-bottom: 80px;
+    
+    background-color: var(--main-bg-color);
+
+    transition: margin-left 0.3s ease;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 100px;
+    padding: 20px 0;
+    border-radius: 0 30px 30px 0;
+    
+    font-weight: 500;
+
+    background-color: var(--secondary-bg-color);
+
+    transition: width 0.3s ease;
+}
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    margin: 15px 0 50px 0;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.navigations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 10px 20px;
+
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.navigations:hover{
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+.navigations:hover p {
+    color: var(--primary-color);
+}
+.navigations:hover svg {
+    fill: var(--primary-color);
+}
+nav .logo p, .navigations p,
+.menuToggle p{
+    display: none;
+}
+nav.active .logo p,
+nav.active .navigations p, nav.active .menuToggle p {
+    display: flex;
+}
+nav.active .navigations,
+nav.active .logo {
+    justify-content: center;
+}
+nav.active {
+    width: 230px;
+}
+body.nav-active {
+    margin-left: 230px;
+}
+aside.nav-active {
+    left: 240px;
+}
+.menuToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+}

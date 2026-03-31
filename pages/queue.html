@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonique - Web Player</title>
     <link rel="icon" href="../assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/notification.css">
+    <link rel="stylesheet" href="../css/queue.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32M40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72"/></svg>
                     <p>Search</p>
                 </a>
-                <a class="navigations" title="Library">
+                <a href="library.html" class="navigations" title="Library">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M104 34H56a14 14 0 0 0-14 14v160a14 14 0 0 0 14 14h48a14 14 0 0 0 14-14V48a14 14 0 0 0-14-14M54 78h52v100H54Zm2-32h48a2 2 0 0 1 2 2v18H54V48a2 2 0 0 1 2-2m48 164H56a2 2 0 0 1-2-2v-18h52v18a2 2 0 0 1-2 2m125.7-15L196.51 37.16a14 14 0 0 0-16.63-10.85l-46.81 10.06A14.09 14.09 0 0 0 122.3 53l33.19 157.81a14 14 0 0 0 6.1 8.9a13.85 13.85 0 0 0 7.57 2.26a13.6 13.6 0 0 0 3-.32l46.81-10.05A14.09 14.09 0 0 0 229.7 195m-82.81-83.32l50.73-10.9l14.12 67.16L161 178.81Zm-6.63-31.56L191 69.19L195.15 89l-50.73 10.9Zm-4.66-32l46.8-10.05a2 2 0 0 1 .42 0a1.9 1.9 0 0 1 1.05.32a2 2 0 0 1 .89 1.31l3.75 17.82l-50.72 10.82l-3.74-17.78a2.07 2.07 0 0 1 1.55-2.46Zm80.81 151.8L169.6 210a1.92 1.92 0 0 1-1.47-.27a2 2 0 0 1-.89-1.31l-3.75-17.82l50.72-10.9l3.79 17.73a2.07 2.07 0 0 1-1.59 2.47Z"/></svg>
                     <p>Library</p>
                 </a>
@@ -53,16 +53,16 @@
     </nav>
     <header>
         <div class="current-page">
-            <h1>Notifications</h1>
+            <h1>Queue</h1>
         </div>
         <form class="left-header">
-            <input type="text" name="search" id="search" placeholder="Search">
+            <input type="text" onclick="toggleSearch()" name="search" id="search" placeholder="Search">
             <label for="search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32M40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72"/></svg>
             </label>
         </form>
         <div class="right-header">
-            <a href="">
+            <a href="notification.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="" d="M221.8 175.94c-5.55-9.56-13.8-36.61-13.8-71.94a80 80 0 1 0-160 0c0 35.34-8.26 62.38-13.81 71.94A16 16 0 0 0 48 200h40.81a40 40 0 0 0 78.38 0H208a16 16 0 0 0 13.8-24.06M128 216a24 24 0 0 1-22.62-16h45.24A24 24 0 0 1 128 216m-80-32c7.7-13.24 16-43.92 16-80a64 64 0 1 1 128 0c0 36.05 8.28 66.73 16 80Z"/></svg>
             </a>
             <a href="profile.html">
@@ -71,153 +71,42 @@
         </div>
     </header>
     <main>
-        <section class="notification-filter">
-            <div class="notification-type">
-                <a class="" href="notification.html">All <span>13</span></a>
-                <a class="" href="notificationsRead.html">Read <span>6</span></a>
-                <a class="active">Unread <span>7</span></a>
+        <section>
+            <div class="queue-navigations">
+                <a href="" class="queue-navs active">Queue</a>
+                <a class="queue-navs">Recently Played</a>
+                <a href="" class="queue-navs">Recommendation</a>
             </div>
-            <a class="markRead" href="">Mark all as read</a>
-        </section>
-        <section class="notification-container">
-            <div class="notification-header">
-                <div class="logo">
-                </div>
-                <div class="time">
-                    <p>Time</p>
-                </div>
-                <div class="date">
-                    <p>Date</p>
-                </div>
-                <div class="more">
-                    <p>More</p>
-                </div>
-            </div>
-            <h2>This Week</h2>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M236.8 188.09L149.35 36.22a24.76 24.76 0 0 0-42.7 0L19.2 188.09a23.51 23.51 0 0 0 0 23.72A24.35 24.35 0 0 0 40.55 224h174.9a24.35 24.35 0 0 0 21.33-12.19a23.51 23.51 0 0 0 .02-23.72M120 104a8 8 0 0 1 16 0v40a8 8 0 0 1-16 0Zm8 88a12 12 0 1 1 12-12a12 12 0 0 1-12 12"/></svg>
-                    <div class="name">
-                        <h3>Subscription failed</h3>
-                        <p>Please try again later.</p>
+            <div class="queue-container">
+                <h2>Now Playing</h2>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>#</h3>
+                        <img src="../assets/images/multo-cover.jpg" alt="" width="60">
+                        <p>Multo</p>
                     </div>
-                </div>
-                <div class="time">
-                    <p>8:30 AM</p>
-                </div>
-                <div class="date">
-                    <p>Today</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="" d="M12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11s-4.925 11-11 11M9 12V8H7v4zm8 0V8h-2v4zm-5 7a5 5 0 0 0 5-5H7a5 5 0 0 0 5 5"/></svg>                    
-                    <div class="name">
-                        <h3>Welcome Back</h3>
-                        <p>You have successfully logged in.</p>
+                    <div class="song-album">
+                        <p>Single</p>
                     </div>
-                </div>
-                <div class="time">
-                    <p>7:00 AM</p>
-                </div>
-                <div class="date">
-                    <p>Today</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="" fill-rule="evenodd" d="M18.75 10.75V8h1.5v2.75H23v1.5h-2.75V15h-1.5v-2.75H16v-1.5zm-10.918 1.6C7.096 11.478 6.5 9.85 6.5 8.71V7a4 4 0 0 1 8 0v1.71c0 1.14-.6 2.773-1.332 3.642l-.361.428c-.59.699-.406 1.588.419 1.99l5.66 2.762c.615.3 1.114 1.093 1.114 1.783v.687a1 1 0 0 1-1.001.998H2a1 1 0 0 1-1-.998v-.687c0-.685.498-1.483 1.114-1.784l5.66-2.762c.821-.4 1.012-1.288.42-1.99z"/></svg>                    
-                    <div class="name">
-                        <h3>New follower</h3>
-                        <p>Adriane Costales followed you.</p>
+                    <div class="song-duration">
+                        <p>4:00</p>
                     </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
                 </div>
-                <div class="time">
-                    <p>6:50 AM</p>
-                </div>
-                <div class="date">
-                    <p>April 9, 2026</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="" fill-rule="evenodd" d="M18.75 10.75V8h1.5v2.75H23v1.5h-2.75V15h-1.5v-2.75H16v-1.5zm-10.918 1.6C7.096 11.478 6.5 9.85 6.5 8.71V7a4 4 0 0 1 8 0v1.71c0 1.14-.6 2.773-1.332 3.642l-.361.428c-.59.699-.406 1.588.419 1.99l5.66 2.762c.615.3 1.114 1.093 1.114 1.783v.687a1 1 0 0 1-1.001.998H2a1 1 0 0 1-1-.998v-.687c0-.685.498-1.483 1.114-1.784l5.66-2.762c.821-.4 1.012-1.288.42-1.99z"/></svg>
-                    <div class="name">
-                        <h3>New following</h3>
-                        <p>You followed Lawrence Miranda.</p>
+                <h2>Suggested Songs</h2>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>#</h3>
+                        <img src="../assets/images/albums/playlist-cover-01.jpg" alt="" width="60">
+                        <p></p>
                     </div>
-                </div>
-                <div class="time">
-                    <p>6:43 AM</p>
-                </div>
-                <div class="date">
-                    <p>April 8, 2026</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="" fill-rule="evenodd" d="M18.75 10.75V8h1.5v2.75H23v1.5h-2.75V15h-1.5v-2.75H16v-1.5zm-10.918 1.6C7.096 11.478 6.5 9.85 6.5 8.71V7a4 4 0 0 1 8 0v1.71c0 1.14-.6 2.773-1.332 3.642l-.361.428c-.59.699-.406 1.588.419 1.99l5.66 2.762c.615.3 1.114 1.093 1.114 1.783v.687a1 1 0 0 1-1.001.998H2a1 1 0 0 1-1-.998v-.687c0-.685.498-1.483 1.114-1.784l5.66-2.762c.821-.4 1.012-1.288.42-1.99z"/></svg>                    
-                    <div class="name">
-                        <h3>New follower</h3>
-                        <p>Jaren Dumpang followed you.</p>
+                    <div class="song-album">
+                        <p>Single</p>
                     </div>
-                </div>
-                <div class="time">
-                    <p>6:00 AM</p>
-                </div>
-                <div class="date">
-                    <p>April 6, 2026</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M240 98a57.63 57.63 0 0 1-17 41l-89.3 90.62a8 8 0 0 1-11.4 0L33 139a58 58 0 0 1 82-82.1l13 12.15l13.09-12.19A58 58 0 0 1 240 98"/></svg>
-                    <div class="name">
-                        <h3>New like</h3>
-                        <p>Jaren Dumpang liked your playlist.</p>
+                    <div class="song-duration">
+                        <p>4:00</p>
                     </div>
-                </div>
-                <div class="time">
-                    <p>5:30 AM</p>
-                </div>
-                <div class="date">
-                    <p>April 6, 2026</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
-                </div>
-            </div>
-            <div class="notification-box">
-                <div class="logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M240 98a57.63 57.63 0 0 1-17 41l-89.3 90.62a8 8 0 0 1-11.4 0L33 139a58 58 0 0 1 82-82.1l13 12.15l13.09-12.19A58 58 0 0 1 240 98"/></svg>
-                    <div class="name">
-                        <h3>New like</h3>
-                        <p>You liked Mundo by IV of Spades.</p>
-                    </div>
-                </div>
-                <div class="time">
-                    <p>4:28 AM</p>
-                </div>
-                <div class="date">
-                    <p>April 6, 2026</p>
-                </div>
-                <div class="more">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-84-16a16 16 0 1 0 16 16a16 16 0 0 0-16-16m136 0a16 16 0 1 0 16 16a16 16 0 0 0-16-16"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
                 </div>
             </div>
         </section>
@@ -250,9 +139,7 @@
             <svg class="deviceBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="gray" d="M224 72h-16v-8a24 24 0 0 0-24-24H40a24 24 0 0 0-24 24v96a24 24 0 0 0 24 24h112v8a24 24 0 0 0 24 24h48a24 24 0 0 0 24-24V96a24 24 0 0 0-24-24M40 168a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8h144a8 8 0 0 1 8 8v8h-16a24 24 0 0 0-24 24v72Zm192 24a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8V96a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8Zm-96 16a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h40a8 8 0 0 1 8 8m80-96a8 8 0 0 1-8 8h-16a8 8 0 0 1 0-16h16a8 8 0 0 1 8 8"/></svg>
             <svg class="volumeBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M163.51 24.81a8 8 0 0 0-8.42.88L85.25 80H40a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h45.25l69.84 54.31A8 8 0 0 0 168 224V32a8 8 0 0 0-4.49-7.19M152 207.64l-59.09-45.95A7.94 7.94 0 0 0 88 160H40V96h48a7.94 7.94 0 0 0 4.91-1.69L152 48.36ZM208 104v48a8 8 0 0 1-16 0v-48a8 8 0 0 1 16 0m32-16v80a8 8 0 0 1-16 0V88a8 8 0 0 1 16 0"/></svg>
             <input type="range" name="" id="" min="0" max="100" value="67">
-            <a href="queue.html">
-                <svg class="queueBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M32 64a8 8 0 0 1 8-8h176a8 8 0 0 1 0 16H40a8 8 0 0 1-8-8m8 72h120a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16m72 48H40a8 8 0 0 0 0 16h72a8 8 0 0 0 0-16m135.66-57.7a8 8 0 0 1-10 5.36L208 122.75V192a32.05 32.05 0 1 1-16-27.69V112a8 8 0 0 1 10.3-7.66l40 12a8 8 0 0 1 5.36 9.96M192 192a16 16 0 1 0-16 16a16 16 0 0 0 16-16"/></svg>
-            </a>
+            <svg class="queueBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M32 64a8 8 0 0 1 8-8h176a8 8 0 0 1 0 16H40a8 8 0 0 1-8-8m8 72h120a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16m72 48H40a8 8 0 0 0 0 16h72a8 8 0 0 0 0-16m135.66-57.7a8 8 0 0 1-10 5.36L208 122.75V192a32.05 32.05 0 1 1-16-27.69V112a8 8 0 0 1 10.3-7.66l40 12a8 8 0 0 1 5.36 9.96M192 192a16 16 0 1 0-16 16a16 16 0 0 0 16-16"/></svg>
             <a href="expandedPlayer.html">
                 <svg class="expandBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="" d="M214 48v48a6 6 0 0 1-12 0V62.48l-53.76 53.76a6 6 0 0 1-8.48-8.48L193.52 54H160a6 6 0 0 1 0-12h48a6 6 0 0 1 6 6m-106.24 91.76L54 193.52V160a6 6 0 0 0-12 0v48a6 6 0 0 0 6 6h48a6 6 0 0 0 0-12H62.48l53.76-53.76a6 6 0 0 0-8.48-8.48"/></svg>
             </a>
