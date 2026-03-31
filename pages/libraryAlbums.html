@@ -62,7 +62,7 @@
             </label>
         </form>
         <div class="right-header">
-            <a href="notification.html">
+            <a href="notification.html" class="notif">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="" d="M221.8 175.94c-5.55-9.56-13.8-36.61-13.8-71.94a80 80 0 1 0-160 0c0 35.34-8.26 62.38-13.81 71.94A16 16 0 0 0 48 200h40.81a40 40 0 0 0 78.38 0H208a16 16 0 0 0 13.8-24.06M128 216a24 24 0 0 1-22.62-16h45.24A24 24 0 0 1 128 216m-80-32c7.7-13.24 16-43.92 16-80a64 64 0 1 1 128 0c0 36.05 8.28 66.73 16 80Z"/></svg>
             </a>
             <a href="profile.html">
@@ -80,6 +80,21 @@
             <div class="albums-section">
                 <h1>Recently Album Played</h1>
                 <div class="albums">
+                    <a onclick="showAlbum('The Script', 'The Script')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-06.jpg" alt="" height="250">
+                        <p>The Script</p>
+                        <p>2008 · The Script</p>
+                    </a>
+                    <a onclick="showAlbum('Brand New Eyes', 'Paramore')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-07.jpg" alt="" height="250">
+                        <p>Brand New Eyes</p>
+                        <p>Paramore</p>
+                    </a>
+                    <a onclick="showAlbum('A Beautiful Blur', 'LANY')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-20.jpg" alt="" height="250">
+                        <p>A Beautiful Blur</p>
+                        <p>LANY</p>
+                    </a>
                     <a onclick="showAlbum('CLAPCLAPCLAP!', 'IV of Spades')" class="cards">
                         <img src="../assets/images/albums/playlist-cover-21.jpg" alt="" height="250">
                         <p>CLAPCLAPCLAP!</p>
@@ -110,29 +125,34 @@
                         <p>Funshiang Pag-Ibig</p>
                         <p>Silent Sanctuary</p>
                     </a>
-                    <a onclick="showAlbum('The Script', 'The Script')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-06.jpg" alt="" height="250">
-                        <p>The Script</p>
-                        <p>2008 · The Script</p>
-                    </a>
-                    <a onclick="showAlbum('Brand New Eyes', 'Paramore')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-07.jpg" alt="" height="250">
-                        <p>Brand New Eyes</p>
-                        <p>Paramore</p>
-                    </a>
-                    <a onclick="showAlbum('A Beautiful Blur', 'LANY')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-20.jpg" alt="" height="250">
-                        <p>A Beautiful Blur</p>
-                        <p>LANY</p>
-                    </a>
                 </div>
 
                 <h1></h1>
                 <div class="albums">
+                    <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
+                        <p>Speak Now (Taylor's Version)</p>
+                        <p>Taylor Swift</p>
+                    </a>
+                    <a onclick="showAlbum('Doo-Wops N Hooligans', 'Bruno Mars')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
+                        <p>Doo-Wops & Hooligans</p>
+                        <p>Bruno Mars</p>
+                    </a>
+                    <a onclick="showAlbum('SOS', 'SZA')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
+                        <p>SOS</p>
+                        <p>SZA</p>
+                    </a>
                     <a onclick="showAlbum('Hatful of Hollow', 'The Smiths')" class="cards">
                         <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" height="250">
                         <p>Hatful of Hollow</p>
                         <p>The Smiths</p>
+                    </a>
+                    <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
+                        <p>Fearless (Taylor's Version)</p>
+                        <p>Taylor Swift</p>
                     </a>
                     <a onclick="showAlbum('Kid Krow', 'Conan Gray')" class="cards">
                         <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" height="250">
@@ -143,26 +163,6 @@
                         <img src="../assets/images/albums/playlist-cover-10.jpg" alt="" height="250">
                         <p>Harry's House</p>
                         <p>Harry Styles</p>
-                    </a>
-                    <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
-                        <p>Fearless (Taylor's Version)</p>
-                        <p>Taylor Swift</p>
-                    </a>
-                    <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
-                        <p>Speak Now (Taylor's Version)</p>
-                        <p>Taylor Swift</p>
-                    </a>
-                    <a  onclick="showAlbum('Doo-Wops & Hooligans', 'Bruno Mars')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
-                        <p>Doo-Wops & Hooligans</p>
-                        <p>Bruno Mars</p>
-                    </a>
-                    <a onclick="showAlbum('SOS', 'SZA')" class="cards">
-                        <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
-                        <p>SOS</p>
-                        <p>SZA</p>
                     </a>
                 </div>
             </div>

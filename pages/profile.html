@@ -56,7 +56,7 @@
             <h1>Profile</h1>
         </div>
         <div class="right-header">
-            <a href="notification.html">
+            <a href="notification.html" class="notif">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="" d="M221.8 175.94c-5.55-9.56-13.8-36.61-13.8-71.94a80 80 0 1 0-160 0c0 35.34-8.26 62.38-13.81 71.94A16 16 0 0 0 48 200h40.81a40 40 0 0 0 78.38 0H208a16 16 0 0 0 13.8-24.06M128 216a24 24 0 0 1-22.62-16h45.24A24 24 0 0 1 128 216m-80-32c7.7-13.24 16-43.92 16-80a64 64 0 1 1 128 0c0 36.05 8.28 66.73 16 80Z"/></svg>
             </a>
             <a href="profile.html">
@@ -93,106 +93,96 @@
         <section class="albums-section">
             <h1>Your Top Albums</h1>
             <div class="albums">
-                <a onclick="showAlbum('Brand New Eyes', 'Paramore')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-07.jpg" alt="" height="250">
-                    <p>Brand New Eyes</p>
-                    <p>Paramore</p>
+                <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
+                    <p>Fearless (Taylor's Version)</p>
+                    <p>Taylor Swift</p>
                 </a>
-                <a onclick="showAlbum('we fell in love in october', 'Girl in Red')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-01.jpg" alt="" height="250">
-                    <p>we fell in love in october</p>
-                    <p>Girl in Red</p>
+                <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
+                    <p>Speak Now (Taylor's Version)</p>
+                    <p>Taylor Swift</p>
                 </a>
-                <a onclick="showAlbum('A Beautiful Blur', 'LANY')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-20.jpg" alt="" height="250">
-                    <p>A Beautiful Blur</p>
-                    <p>LANY</p>
+                <a onclick="showAlbum('SOS', 'SZA')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
+                    <p>SOS</p>
+                    <p>SZA</p>
                 </a>
-                <a onclick="showAlbum('The Script', 'The Script')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-06.jpg" alt="" height="250">
-                    <p>The Script</p>
-                    <p>2008 · The Script</p>
+                <a onclick="showAlbum('Hatful of Hollow', 'The Smiths')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" height="250">
+                    <p>Hatful of Hollow</p>
+                    <p>The Smiths</p>
                 </a>
-                <a onclick="showAlbum('Circus', 'Eraserheads')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-03.jpg" alt="" height="250">
-                    <p>Circus</p>
-                    <p>Eraserheads</p>
+                <a onclick="showAlbum('Kid Krow', 'Conan Gray')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" height="250">
+                    <p>Kid Krow</p>
+                    <p>Conan Gray</p>
                 </a>
-                <a onclick="showAlbum('Noon Time Show', 'Itchyworms')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-04.jpg" alt="" height="250">
-                    <p>Noon Time Show</p>
-                    <p>Itchyworms</p>
+                <a onclick="showAlbum('Harry\'s House', 'Harry Styles')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-10.jpg" alt="" height="250">
+                    <p>Harry's House</p>
+                    <p>Harry Styles</p>
                 </a>
-                <a onclick="showAlbum('Fuschiang Pag-Ibig', 'Silent Sanctuary')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-05.jpg" alt="" height="250">
-                    <p>Funshiang Pag-Ibig</p>
-                    <p>Silent Sanctuary</p>
-                </a>
-                <a onclick="showAlbum('CLAPCLAPCLAP!', 'IV of Spades')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-21.jpg" alt="" height="250">
-                    <p>CLAPCLAPCLAP!</p>
-                    <p>IV OF SPADES</p>
-                </a>
-                <a onclick="showAlbum('Pony', 'Rex Orange Country')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-02.jpg" alt="" height="250">
-                    <p>Pony</p>
-                    <p>Rex Orange Country</p>
+                <a onclick="showAlbum('Doo-Wops N Hooligans', 'Bruno Mars')" class="cards">
+                    <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
+                    <p>Doo-Wops & Hooligans</p>
+                    <p>Bruno Mars</p>
                 </a>
             </div>
         </section>
         <section class="artists-section">
             <h1>Your Top Artists</h1>
             <div class="artists">
-                <a  onclick="showArtist('IV of Spades')" class="cards">
+                <a onclick="showArtist('Daniel Caesar')" class="cards">
+                    <img src="../assets/images/artists/artist-cover-08.jpg" alt="" height="250" width="250">
+                    <p>Daniel Caesar</p>
+                    <p>Artist</p>
+                </a>
+                <a onclick="showArtist('Frank Ocean')" class="cards">
+                    <img src="../assets/images/artists/artist-cover-09.jpg" alt="" height="250" width="250">
+                    <p>Frank Ocean</p>
+                    <p>Artist</p>
+                </a>
+                <a onclick="showArtist('Laufey')" class="cards">
+                    <img src="../assets/images/artists/artist-cover-04.jpg" alt="" height="250" width="250">
+                    <p>Laufey</p>
+                    <p>Artist</p>
+                </a>
+                <a onclick="showArtist('IV of Spades')" class="cards">
                     <img src="../assets/images/artists/artist-cover-10.jpg" alt="" height="250" width="250">
                     <p>IV OF SPADES</p>
                     <p>Artist</p>
                 </a>
-                <div class="cards">
+                <a onclick="showArtist('Arthur Nery')" class="cards">
                     <img src="../assets/images/artists/artist-cover-01.jpg" alt="" height="250" width="250">
                     <p>Arthur Nery</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showArtist('Earl Agustin')" class="cards">
                     <img src="../assets/images/artists/artist-cover-02.jpg" alt="" height="250" width="250">
                     <p>Earl Agustin</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showArtist('Rob Deniel')" class="cards">
                     <img src="../assets/images/artists/artist-cover-03.jpg" alt="" height="250" width="250">
                     <p>Rob Deniel</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
-                    <img src="../assets/images/artists/artist-cover-04.jpg" alt="" height="250" width="250">
-                    <p>Laufey</p>
-                    <p>Artist</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showArtist('Lana Del Rey')" class="cards">
                     <img src="../assets/images/artists/artist-cover-05.jpg" alt="" height="250" width="250">
                     <p>Lana Del Rey</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showArtist('Maki')" class="cards">
                     <img src="../assets/images/artists/artist-cover-06.jpg" alt="" height="250" width="250">
                     <p>Maki</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
+                </a>
+                <a onclick="showArtist('Rex Orange Country')" class="cards">
                     <img src="../assets/images/artists/artist-cover-07.jpg" alt="" height="250" width="250">
                     <p>Rex Orange Country</p>
                     <p>Artist</p>
-                </div>
-                <div class="cards">
-                    <img src="../assets/images/artists/artist-cover-08.jpg" alt="" height="250" width="250">
-                    <p>Daniel Caesar</p>
-                    <p>Artist</p>
-                </div>
-                <div class="cards">
-                    <img src="../assets/images/artists/artist-cover-09.jpg" alt="" height="250" width="250">
-                    <p>Frank Ocean</p>
-                    <p>Artist</p>
-                </div>
+                </a>
             </div>
         </section>
     </main>

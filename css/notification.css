@@ -88,9 +88,8 @@ section.notification-filter {
     justify-content: space-between;
     /* padding: 10px 30px 30px 30px; */
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px 20px 30px 20px;
     border-bottom: 2px solid var(--gray-color);
-
 }
 .notification-filter .markRead {
     font-weight: 600;
