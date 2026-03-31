@@ -188,26 +188,6 @@
         </section>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger-menu");
-        const navMenu = document.querySelector(".nav-menu");
-        const support = document.querySelector(".support");
-        const errorCon = document.querySelector(".error-container");
-        const errorMess = document.querySelector(".error");
-
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-
-        support.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-
-        errorCon.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-    </script>
+    <script src="js/landingPage.js"></script>
 </body>
 </html>

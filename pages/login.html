@@ -12,6 +12,9 @@
 </head>
 <body>
     <section>
+        <a onclick="window.history.back()" class="back">
+            <p>< Back</p>
+        </a>
             <img src="../assets/images/logo.png" alt="" height="60" width="60">
             <h1>Welcome back</h1>
         <form action="">
@@ -59,35 +62,6 @@
         </span> 
     </div>
 
-    <script>
-        const errorCon = document.querySelector(".error-container");
-        const errorMess = document.querySelector(".error");
-        const socials = document.querySelectorAll(".socials");
-        const forgot = document.querySelector(".forgot");
-
-        socials.forEach(social => {
-            social.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-            });
-        });
-        forgot.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-        errorCon.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-        // const email = document.getElementById("email");
-        // const password = document.getElementById("password");
-
-        // document.querySelector("form").addEventListener("submit", (e) => {
-        //     e.preventDefault();
-        //     if(email.value === "admin@example.com" && password.value === "adminPassword") {
-        //         window.location.href = "sonique.html";
-        //     }
-        // });
-    </script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

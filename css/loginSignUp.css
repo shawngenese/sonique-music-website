@@ -109,6 +109,14 @@ form .forgot {
 form .createAcc {
     margin: 10px 0;
 }
+section a.back {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 section .lower-part {
     display: flex;
     flex-direction: column;

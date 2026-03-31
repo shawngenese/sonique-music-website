@@ -133,48 +133,6 @@
         </section>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger-menu");
-        const navMenu = document.querySelector(".nav-menu");
-        const loadContainer = document.querySelector(".load-container");
-        const loader = document.querySelector(".loader");
-        const microsoftDownload = document.querySelector(".microsoft-download");
-        const platforms = document.querySelectorAll(".platforms");
-
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-
-        microsoftDownload.addEventListener("click", () => {
-            loadContainer.classList.toggle("active");
-            loader.classList.toggle("active");
-        });
-        loadContainer.addEventListener("click", () => {
-            loadContainer.classList.toggle("active");
-            loader.classList.toggle("active");
-        });
-
-        platforms.forEach(platforms => {
-            platforms.addEventListener("click", () => {
-                loadContainer.classList.toggle("active");
-                loader.classList.toggle("active");
-            });
-        });
-
-        const support = document.querySelector(".support");
-        const errorCon = document.querySelector(".error-container");
-        const errorMess = document.querySelector(".error");
-        
-        support.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-
-        errorCon.addEventListener("click", () => {
-            errorCon.classList.toggle("active");
-            errorMess.classList.toggle("active");
-        });
-        
-    </script>
+    <script src="../js/landingPage.js"></script>
 </body>
 </html>

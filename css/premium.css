@@ -1,3 +1,5 @@
+@import url(../css/landingNavFooter.css);
+
 :root {
     --main-bg-color: #000;
     --primary-bg-color: #121212;
@@ -9,11 +11,7 @@
     --main-font: Montserrat, sans-serif;
     /* --secondary-font:  DM Serif Text, Tahoma; */
 }
-/* orange #FF6A21
-dark gray #212121
-super dark gray 	#121212
-gray 	#535353
-light gray 	#b3b3b3 */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,113 +19,6 @@ light gray 	#b3b3b3 */
     font-family: var(--main-font);
     box-sizing: border-box;
     /* border: 1px solid var(--primary-color); */
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-nav li {
-    list-style: none;
-}
-u {
-    color: inherit;
-}
-html, body {
-    scroll-behavior: smooth;
-}
-body {
-    height: 100dvh;
-    width: 100%;
-    animation: fade forwards 3s ease;
-}
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    
-    display: flex;
-    justify-content: space-between;
-    height: 85px;
-    padding: 15px 30px;
-
-    background-color: var(--main-bg-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    cursor: pointer;
-}
-nav .logo h1 {
-    font-size: clamp(2em, 2vw, 2.2em);
-}
-nav .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-.nav-menu li a,
-.nav-menu li a i {
-    transition: all .3s ease;
-}
-
-nav .nav-menu li a:hover,
-nav .nav-menu li a:hover i{
-    color: var(--primary-color);
-    cursor: pointer;
-}
-nav .nav-menu li:hover:nth-child(4) {
-    all: unset;
-}
-.nav-menu .loginBtn {
-    padding: 10px 50px;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 30px;
-
-    font-weight: 600;
-    font-size: 1.2rem;
-
-    cursor: pointer;
-    transition: all .1s ease-out;
-}
-.nav-menu .loginBtn:hover {
-    background-color: var(--primary-color);
-    scale: 1.05;
-}
-.nav-menu .loginBtn:active {
-    background-color: orangered;
-    scale: 0.95;
-}
-nav .nav-menu.active {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    width: 100%;
-    padding: 10px;
-    transform: translateY(0);
-}
-nav .nav-menu.active :nth-child(4){
-    display: none;
-}
-nav .hamburger-menu {
-    position: fixed;
-    right: 10px;
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 2em;
 }
 
 main {
@@ -242,6 +133,7 @@ main .premium-box span {
 }
 .premium-box li {
     margin: 0 20px;
+    list-style: disc
 }
 .premium-box button {
     margin: 30px 0;
@@ -289,7 +181,32 @@ section .premium-box.blue h1{
 section .premium-box.blue button {
     background-color: dodgerblue;
 }
+.load-container.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.loader.active {
+    display: inline-block;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-bottom-color: var(--primary-color);
+
+    animation: rotation 0.7s linear infinite;
+}
 .error-container, .error {
     display: none;
 }
@@ -327,54 +244,6 @@ section .premium-box.blue button {
     animation: slideUp 0.5s ease-out forwards;
 }
 
-footer {
-    background-color: black;
-    padding: 50px 100px 50px 100px;
-}
-footer li {
-    list-style: none;
-}
-footer .container,
-footer .last-container {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
-}
-footer .container .footer-containers.logo {
-    display: flex;
-}
-footer .container .footer-containers.logo h1 {
-    margin: 1px 0 0 5px;
-    font-weight: 600;
-    font-size: 1.4rem;
-}
-footer .footer-containers p{
-    color: gray;
-}
-footer .footer-containers li{
-    margin: 15px 0;
-}
-footer .footer-containers li:hover,
-footer .last-container li:hover{
-    color: var(--primary-color);
-    cursor: pointer;
-}
-footer svg {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50px;
-
-    background-color: var(--secondary-bg-color);
-
-    cursor: pointer;
-}
-footer .last-container ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px
-}
-
 @keyframes slideUp {
     from {
         transform: translateY(100px);
@@ -400,6 +269,14 @@ footer .last-container ul {
         opacity: 0.9;
     } to {
         opacity: 1;
+    }
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
