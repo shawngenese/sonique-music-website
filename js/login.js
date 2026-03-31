@@ -24,8 +24,8 @@ const password = document.getElementById("password");
 
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
-    // admin account reveal HAHAHAHA
     window.location = "?username=admin@example.com" + "&password=admin";
+    // admin account reveal HAHAHAHA
     if(email.value === "admin@example.com" && password.value === "admin") {
         window.location.href = "sonique.html";
     }
