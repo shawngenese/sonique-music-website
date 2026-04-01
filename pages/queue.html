@@ -79,9 +79,30 @@
             </div>
             <div class="queue-container">
                 <h2>Now Playing</h2>
-                <div class="song-card">
+                <div class="song-card active">
                     <div class="song-logo">
-                        <h3>#</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <rect width="2.8" height="12" x="1" y="6" fill="currentColor">
+                                <animate attributeName="y" begin="SVGKWB9Ob0W.begin+0.4s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="6;1;6"/>
+                                <animate attributeName="height" begin="SVGKWB9Ob0W.begin+0.4s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="12;22;12"/>
+                            </rect>
+                            <rect width="2.8" height="12" x="5.8" y="6" fill="currentColor">
+                                <animate attributeName="y" begin="SVGKWB9Ob0W.begin+0.2s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="6;1;6"/>
+                                <animate attributeName="height" begin="SVGKWB9Ob0W.begin+0.2s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="12;22;12"/>
+                            </rect>
+                            <rect width="2.8" height="12" x="10.6" y="6" fill="currentColor">
+                                <animate id="SVGKWB9Ob0W" attributeName="y" begin="0;SVGCkSt6baQ.end-0.1s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="6;1;6"/>
+                                <animate attributeName="height" begin="0;SVGCkSt6baQ.end-0.1s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="12;22;12"/>
+                            </rect><rect width="2.8" height="12" x="15.4" y="6" fill="currentColor">
+                                <animate attributeName="y" begin="SVGKWB9Ob0W.begin+0.2s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="6;1;6"/>
+                                <animate attributeName="height" begin="SVGKWB9Ob0W.begin+0.2s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="12;22;12"/>
+                            </rect>
+                            <rect width="2.8" height="12" x="20.2" y="6" fill="currentColor">
+                                <animate id="SVGCkSt6baQ" attributeName="y" begin="SVGKWB9Ob0W.begin+0.4s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="6;1;6"/>
+                                <animate attributeName="height" begin="SVGKWB9Ob0W.begin+0.4s" calcMode="spline" dur="0.6s" keySplines=".14,.73,.34,1;.65,.26,.82,.45" values="12;22;12"/>
+                            </rect>
+                        </svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path fill="currentColor" d="M54 96v64a6 6 0 0 1-12 0V96a6 6 0 0 1 12 0m34-70a6 6 0 0 0-6 6v192a6 6 0 0 0 12 0V32a6 6 0 0 0-6-6m40 32a6 6 0 0 0-6 6v128a6 6 0 0 0 12 0V64a6 6 0 0 0-6-6m40 32a6 6 0 0 0-6 6v64a6 6 0 0 0 12 0V96a6 6 0 0 0-6-6m40-16a6 6 0 0 0-6 6v96a6 6 0 0 0 12 0V80a6 6 0 0 0-6-6"/></svg> -->
                         <img src="../assets/images/multo-cover.jpg" alt="" width="60">
                         <p>Multo</p>
                     </div>
@@ -91,20 +112,106 @@
                     <div class="song-duration">
                         <p>4:00</p>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m48-88a8 8 0 0 1-8 8h-32v32a8 8 0 0 1-16 0v-32H88a8 8 0 0 1 0-16h32V88a8 8 0 0 1 16 0v32h32a8 8 0 0 1 8 8"/></svg>
+
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                 -->
                 </div>
                 <h2>Suggested Songs</h2>
                 <div class="song-card">
                     <div class="song-logo">
-                        <h3>#</h3>
-                        <img src="../assets/images/albums/playlist-cover-01.jpg" alt="" width="60">
-                        <p></p>
+                        <h3>2</h3>
+                        <img src="../assets/images/4ofSpades/music-cover-04.jpg" alt="" width="60">
+                        <p>Mundo</p>
+                    </div>
+                    <div class="song-album">
+                        <p>Single</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>5:49</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>3</h3>
+                        <img src="../assets/images/rexOrangeCountry/music-cover-01.png" alt="" width="60">
+                        <p>Love Me Not</p>
                     </div>
                     <div class="song-album">
                         <p>Single</p>
                     </div>
                     <div class="song-duration">
                         <p>4:00</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>4</h3>
+                        <img src="../assets/images/albums/playlist-cover-03.jpg" alt="" width="60">
+                        <p>With A Smile</p>
+                    </div>
+                    <div class="song-album">
+                        <p>Circus</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>4:39</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>5</h3>
+                        <img src="../assets/images/albums/playlist-cover-07.jpg" alt="" width="60">
+                        <p>The Only Exception</p>
+                    </div>
+                    <div class="song-album">
+                        <p>Brand New Eyes</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>4:27</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>6</h3>
+                        <img src="../assets/images/albums/playlist-cover-20.jpg" alt="" width="60">
+                        <p>’Cause You Have To</p>
+                    </div>
+                    <div class="song-album">
+                        <p>A Beautiful Blur</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>4:10</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>7</h3>
+                        <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" width="60">
+                        <p>Heavens Knows I’m Miserable Now</p>
+                    </div>
+                    <div class="song-album">
+                        <p>Hatful of Hollow</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>3:35</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
+                </div>
+                <div class="song-card">
+                    <div class="song-logo">
+                        <h3>8</h3>
+                        <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" width="60">
+                        <p>Heather</p>
+                    </div>
+                    <div class="song-album">
+                        <p>Kid Krow</p>
+                    </div>
+                    <div class="song-duration">
+                        <p>3:58</p>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="currentColor" d="M34 64a6 6 0 0 1 6-6h176a6 6 0 0 1 0 12H40a6 6 0 0 1-6-6m6 70h176a6 6 0 0 0 0-12H40a6 6 0 0 0 0 12m104 52H40a6 6 0 0 0 0 12h104a6 6 0 0 0 0-12m88 0h-18v-18a6 6 0 0 0-12 0v18h-18a6 6 0 0 0 0 12h18v18a6 6 0 0 0 12 0v-18h18a6 6 0 0 0 0-12"/></svg>                
                 </div>

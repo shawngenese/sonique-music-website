@@ -17,15 +17,16 @@
             </a>
             <img src="../assets/images/logo.png" alt="" height="60" width="60">
             <h1>Create Account</h1>
+            <p class="createError" style="color: rgb(0, 255, 0);"></p>
         <form action="">
             <label for="">Name</label>
-            <input type="text" name="" id="" placeholder="Name">
+            <input type="text" name="" class="name" placeholder="Name" required>
             <label for="">Email or username</label>
-            <input type="email" name="" id="" placeholder="Email or username">
+            <input type="email" name="" class="email" placeholder="Email or username" required>
             <label for="">Password</label>
-            <input type="password" name="" id="" placeholder="Password">
+            <input type="password" name="" class="password" placeholder="Password" required>
             <label for="">Confirm Password</label>
-            <input type="password" name="" id="" placeholder="Confirm password">
+            <input type="password" name="" class="confirmPassword" placeholder="Confirm password" required>
             <input class="createAcc" type="submit" value="Create account">
         </form>
         <div class="lower-part">
@@ -35,7 +36,9 @@
     </section>
     <p>
         This sign up page is created for educational purposes only. <a href="#">Terms and condition</a>.
-        All your information will only store in local storage. Thank you for your understanding.
+        Dummy account is provided. Thank you for your cooperation.
     </p>
+
+    <script src="../js/createAccount.js"></script>
 </body>
 </html>

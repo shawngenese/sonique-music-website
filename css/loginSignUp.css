@@ -24,6 +24,7 @@ light gray 	#b3b3b3 */
 }
 a {
     transition: all .15s ease-out;
+    cursor: pointer;
 }
 body {
     display: flex;

@@ -125,12 +125,14 @@ section {
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
+
 .song-card .song-logo {
     display: flex;
     align-items: center;
     flex: 1;
 }
-.song-card:hover {
+.song-card:hover,
+.song-card.active {
     background-color: var(--primary-bg-color);
     border-radius: 20px;
 }

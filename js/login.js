@@ -1,4 +1,3 @@
-
 const errorCon = document.querySelector(".error-container");
 const errorMess = document.querySelector(".error");
 const socials = document.querySelectorAll(".socials");
@@ -19,14 +18,33 @@ errorCon.addEventListener("click", () => {
     errorMess.classList.toggle("active");
 });
 
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+let errorMessage = document.querySelector("#errorMessage");
+
+function showPass() {
+    email.value = "admin@sonique";
+    password.value = "admin"; 
+}
 
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
-    window.location = "?username=admin@example.com" + "&password=admin";
-    // admin account reveal HAHAHAHA
-    if(email.value === "admin@example.com" && password.value === "admin") {
-        window.location.href = "sonique.html";
+    if(email.value === "admin@sonique" && password.value === "admin") {
+        errorMessage.innerHTML = `Redirecting to Sonique. Please wait a moment.`;
+        errorMessage.style.color = "rgb(0, 255, 0)";
+        setTimeout(() => window.location.href = "sonique.html", 3000);
+    }
+    else if (email.value == "" || password.value == "") {
+        errorMessage.style.color = "red";
+        errorMessage.textContent = "Please fill the input fields.";   
+    }
+    else {
+        errorMessage.textContent = "Invalid username or password. Try again.";
+        email.value = "";
+        password.value = "";
+        setTimeout(() => {
+            errorMessage.innerHTML = `LOGIN USING DUMMY ACCOUNT <a onclick="showPass()">CLICK HERE</a>`;
+            errorMessage.style.color = "rgb(0, 255, 0)";
+        }, 5000);
     }
 });
