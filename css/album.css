@@ -17,7 +17,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color:var(--main-text-color);
     font-family: var(--main-font);
     box-sizing: border-box;
     /* border: 1px solid var(--primary-color); */

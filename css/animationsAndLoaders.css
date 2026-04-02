@@ -83,3 +83,69 @@
         opacity: 1;
     }
 }
+
+@keyframes fillInLoader {
+    0% {
+        width: 0px;
+    }
+    30% {
+        width: 10%;
+    }
+    50% {
+        width: 20%;
+    }
+    60% {
+        width: 35%;
+    }
+    80% {
+        width: 40%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes fadeOutLoader {
+    0% {
+
+    }
+    5% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        background-color: transparent;
+        opacity: 0;
+    }
+}
+@keyframes scaleOut {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 5;
+        opacity: 0;
+    }
+} 
+@keyframes fillInSVG {
+    0% {
+        stroke-dasharray: 0, 1000;
+        opacity: 1;
+    }
+    100% {
+        stroke-dasharray: 1000, 0;
+        opacity: 1;
+    }
+}
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        scale: -10;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        background-color: var(--primary-color);
+    }
+}

@@ -58,3 +58,8 @@ shuffle.forEach(shuffle => {
 loop.addEventListener("click", () => {
     loop.classList.toggle("active")
 });
+
+// para hindi sila makapag select ng text (google)
+document.body.style.userSelect = "none";
+document.body.style.webkitUserSelect = "none"; // For Safari
+document.body.style.msUserSelect = "none";     // For older IE
