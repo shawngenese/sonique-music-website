@@ -1,9 +1,11 @@
 window.addEventListener("load", () => {
+    const mainLoader = document.querySelector('.soniqueLoader');
     if (!sessionStorage.getItem('animate')) {
-        document.querySelector('.soniqueLoader').classList.add('active');
         setTimeout(() => {
-            document.querySelector('.soniqueLoader').classList.remove('active');
+            mainLoader.classList.add('hide');
+            sessionStorage.setItem('animate', 'true');
         }, 12000);
-        sessionStorage.setItem('animate', 'true');
+    } else {
+        mainLoader.classList.add('hide');
     }
 });
