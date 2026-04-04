@@ -163,15 +163,15 @@
                 <div class="container-child">
                     <div class="left">
                         <h3>Who can see your activity</h3>
-                        <label for="radio">
+                        <label>
                             <input type="radio" name="id" checked="">
                             <h4>Everyone</h4> – <p>Anyone on the platform can see your activity</p>
                         </label>
-                        <label for="radio" >
+                        <label>
                             <input type="radio" name="id">
                             <h4>Followers Only</h4> – <p>Only people who follow you can see your activity</p>
                         </label>
-                        <label for="radio" >
+                        <label>
                             <input type="radio" name="id">
                             <h4>Only Me</h4> – <p>Your activity is completely private</p>
                         </label>
@@ -238,7 +238,7 @@
                         </p>
                     </div>
                     <div class="right">
-                        <button onclick="window.print()" class="btn red">Delete</button>
+                        <button onclick="showPopUp()" class="btn red">Delete Account</button>
                     </div>
                 </div>
             </div>
@@ -345,9 +345,28 @@
             <p>&copy; 2026 Sonique</p>
         </section>
     </footer>
-    
+
+    <div class="are-you-sure-popup">
+        <div class="popup">
+            <span class="emoji">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 3a9.5 9.5 0 0 1 9.5 9.5a9.5 9.5 0 0 1-9.5 9.5A9.5 9.5 0 0 1 2 12.5A9.5 9.5 0 0 1 11.5 3m0 1A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 11.5 4M11 8v2h1V8zm0 4v5h1v-5z"/></svg>
+            </span>
+            <span class="text">
+                <h2>Delete Account</h2>
+                <p>Are you sure you want to delete your account?</p>
+            </span>
+            <p class="message" style="color: red;"></p>
+            <span class="buttons">
+                <button class="btn red confirm" id="deleteBtn">Delete</button>
+                <button class="btn" id="cancelBtn">Cancel</button>
+            </span>
+        </div>
+    </div>
+
     <script src="../js/musicPlayer.js"></script>
     <script src="../js/toggleNav.js"></script>
     <script src="../js/searchLoader.js"></script>
+    <script src="../js/confirmationPopup.js"></script>
+
 </body>
 </html>

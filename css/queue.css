@@ -149,4 +149,7 @@ section {
 .song-logo img {
     border-radius: 10px;
 }
+.song-duration, .song-album {
+    font-weight: 450;
+}
 

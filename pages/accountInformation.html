@@ -131,10 +131,11 @@
                 <div class="container-child">
                     <div class="left">
                         <h3>Profile Picture</h3>
-                        <img src="../assets/images/no-pfp-icon.jpg" alt="" class="user-profile" height="130" width="130" style="border-radius: 50%;">
+                        <img src="../assets/images/no-pfp-icon.jpg" alt="" class="user-profile" height="130" width="130" style="border-radius: 50%;" id="profileImageInputed">
                     </div>
                     <div class="right">
-                        <button class="btn">Change Photo</button>
+                        <label class="btn" for="profileImage">Change Photo</label>
+                        <input type="file" accept="image" id="profileImage" style="display: none;">
                     </div>
                 </div>
                 <div class="container-child">
@@ -143,7 +144,7 @@
                         <p>Shawn Genese</p>
                     </div>
                     <div class="right">
-                        <button class="btn">Change</button>
+                        <button class="btn" onclick="showPopUpChange('Change Name')">Change</button>
                     </div>
                 </div>
                 <div class="container-child">
@@ -152,16 +153,16 @@
                         <p>@shawngenese</p>
                     </div>
                     <div class="right">
-                        <button class="btn">Change</button>
+                        <button class="btn" onclick="showPopUpChange('Change Username')">Change</button>
                     </div>
                 </div>
                 <div class="container-child">
                     <div class="left">
                         <h3>Password</h3>
-                        <p>shawn****5</p>
+                        <p>ad***</p>
                     </div>
                     <div class="right">
-                        <button class="btn">Change</button>
+                        <button class="btn" onclick="showPopUpChange('Change Password')">Change</button>
                     </div>
                 </div>
                 <div class="container-child">
@@ -170,7 +171,7 @@
                         <p>Male</p>
                     </div>
                     <div class="right">
-                        <button class="btn">Change</button>
+                        <button class="btn" onclick="showPopUpChange('Change Gender')">Change</button>
                     </div>
                 </div>
                 <br><br><hr><br><br>
@@ -295,9 +296,32 @@
             <p>&copy; 2026 Sonique</p>
         </section>
     </footer>
+
+    <div class="are-you-sure-popup">
+        <div class="popup">
+            <span class="emoji">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path fill="currentColor" d="M11.5 3a9.5 9.5 0 0 1 9.5 9.5a9.5 9.5 0 0 1-9.5 9.5A9.5 9.5 0 0 1 2 12.5A9.5 9.5 0 0 1 11.5 3m0 1A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5A8.5 8.5 0 0 0 11.5 4M11 8v2h1V8zm0 4v5h1v-5z"/></svg>
+            </span>
+            <span class="text">
+                <h2 id="changeType"></h2>
+                <p class="message" style="color: red; margin: 20px 0;"></p>
+                <input type="text" name="" id="">
+                <select class="genderOption">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                </select>
+            </span>
+            <span class="buttons">
+                <button class="btn red" id="changeBtn">Change</button>
+                <button class="btn" id="cancelBtn">Cancel</button>
+            </span>
+        </div>
+    </div>
     
     <script src="../js/musicPlayer.js"></script>
     <script src="../js/toggleNav.js"></script>
     <script src="../js/searchLoader.js"></script>
+
+    <script src="../js/confirmationPopup.js"></script>
 </body>
 </html>

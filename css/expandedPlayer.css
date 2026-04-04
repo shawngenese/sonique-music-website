@@ -37,6 +37,7 @@ svg {
 html,body {
     scroll-behavior: smooth;
     animation: fade forwards 1s ease-out;
+    user-select: none;
 }
 body {
     display: flex;

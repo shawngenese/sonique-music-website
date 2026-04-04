@@ -9,7 +9,7 @@
     --gray-color: #535353;
     --light-gray-color: #b3b3b3;
     --primary-color: #FF6A21;
-    --main-text-color:white;
+    --main-text-color:whitesmoke;
     --main-font: Montserrat, sans-serif;
     /* --secondary-font:  DM Serif Text, Tahoma; */
 }
@@ -17,7 +17,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--main-text-color);
     font-family: var(--main-font);
     box-sizing: border-box;
     /* border: 1px solid var(--primary-color); */
@@ -191,7 +191,7 @@ input[type=radio] {
 input[type=radio]:checked {
     accent-color: var(--primary-color);
 }
-.right .btn {
+.btn {
     border: none;
     background-color: var(--primary-color);
     padding: 10px 20px;
@@ -201,12 +201,17 @@ input[type=radio]:checked {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.right .btn:hover {
+.btn:hover {
     scale: 1.05;
 }
-
+.btn:active {
+    scale: 0.9;
+}
 .btn.red {
     background-color: rgb(184, 0, 0);
+}
+.btn.white {
+    background-color: whtie;
 }
 
 footer {
@@ -273,4 +278,71 @@ span.loginDevices {
     100% {
         scale: 1.1;
     }
+}
+.are-you-sure-popup {
+    display: none;
+}
+.are-you-sure-popup.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    background-color: rgba(0,0,0,0.5);
+    animation: none;
+}
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 15px;
+    border-radius: 30px;
+    background-color: var(--secondary-bg-color);
+    width: 320px;
+
+    animation: slideIn 0.3s ease-out forwards;
+}
+.popup .text {
+    text-align: center;
+}
+.popup .text p{
+    color: var(--light-gray-color);
+}
+.popup .btn {
+    margin: 0 3px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px var(--secondary-bg-color) solid;
+
+    font-size: 1rem;
+    font-weight: 600;
+    
+    background-color: var(--gray-color);
+}
+input[type="text"]{
+    outline: var(--gray-color) 2px solid;
+}
+input[type="text"]:focus{
+    outline:#FF6A21 2px solid;
+}
+.genderOption {
+    max-width: 200px;
+    color: white;
+    background-color: gray;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.1rem; 
+    width: 100%;
+    outline: none;
 }

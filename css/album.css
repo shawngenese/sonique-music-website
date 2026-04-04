@@ -212,3 +212,6 @@ svg.btnPlay {
 .song-card .song-title img {
     border-radius: 10px;
 }
+.song-duration, .song-listeners, .song-number, .song-title, .add-song {
+    font-weight: 500;
+}

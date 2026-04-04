@@ -310,3 +310,6 @@ svg.btnPlay {
     cursor: pointer;
 }
 
+.song-duration, .song-album, .song-listeners, .song-number, .song-title, .add-song {
+    font-weight: 500;
+}

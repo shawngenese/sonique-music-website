@@ -124,6 +124,9 @@ main {
     display: flex;
     gap: 20px;
 }
+.follows {
+    font-weight: 500;
+}
 .follows span {
     font-weight: 600;
 }
@@ -134,6 +137,7 @@ main {
 }
 .user-name p {
     color: var(--light-gray-color);
+    font-weight: 500;
 }
 
 .albums-section,
