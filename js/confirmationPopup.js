@@ -10,7 +10,8 @@ function showPopUp() {
 }
 function backToHome() {
     setTimeout(() => {      
-        window.location.href = "../index.html";
+        // window.location.href = "../index.html";
+        window.location.replace("/");
     }, 5000);
 }
 cancelBtn.addEventListener('click', () => {
@@ -22,14 +23,16 @@ confirm.addEventListener("click", () => {
     logoutBtn.textContent = "Exit";
     cancelBtn.style.display = "none";
     backToHome();
-    logoutBtn.onclick = () => window.location.href = "../index.html";
+    // logoutBtn.onclick = () => window.location.href = "../index.html";
+    logoutBtn.onclick = () => window.location.replace("/");
 });
 
 deleteBtn.addEventListener('click', () => {
     message.textContent = "Deleting your account...";
     deleteBtn.textContent = "Exit";
     backToHome();
-    deleteBtn.onclick = () => window.location.href = "../index.html";
+    // deleteBtn.onclick = () => window.location.href = "../index.html";
+    deleteBtn.onclick = () => window.location.replace("/");
     cancelBtn.style.display = "none";
 });
 
