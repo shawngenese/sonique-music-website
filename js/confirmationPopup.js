@@ -24,7 +24,7 @@ confirm.addEventListener("click", () => {
     cancelBtn.style.display = "none";
     backToHome();
     // logoutBtn.onclick = () => window.location.href = "../index.html";
-    logoutBtn.onclick = () => window.location.replace("/");
+    logoutBtn.onclick = () => window.location.replace("/sonique-music-website/");
 });
 
 deleteBtn.addEventListener('click', () => {
@@ -32,7 +32,7 @@ deleteBtn.addEventListener('click', () => {
     deleteBtn.textContent = "Exit";
     backToHome();
     // deleteBtn.onclick = () => window.location.href = "../index.html";
-    deleteBtn.onclick = () => window.location.replace("/");
+    deleteBtn.onclick = () => window.location.replace("/sonique-music-website/");
     cancelBtn.style.display = "none";
 });
 
