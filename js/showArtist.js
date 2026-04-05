@@ -1,5 +1,3 @@
-
-
 const popularArtist = {
     'IV of Spades': [
         { number: 1, image: '../assets/images/4ofSpades/music-cover-04.jpg', title: "Mundo", time: "5:49", listeners: "360,151,156", album: "Single", artistProfile: "../assets/images/4ofSpades/profile.jpg", artistCover: "../assets/images/4ofSpades/cover.jpg", monthlyListeners: "7,341,027 Monthly Listeners"},
