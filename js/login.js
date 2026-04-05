@@ -43,7 +43,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
         email.value = "";
         password.value = "";
         setTimeout(() => {
-            errorMessage.innerHTML = `LOGIN USING DUMMY ACCOUNT <a onclick="showPass()">CLICK HERE</a>`;
+            // errorMessage.innerHTML = `LOGIN USING DUMMY ACCOUNT <a onclick="showPass()">CLICK HERE</a>`;
+            errorMessage.innerHTML = `DEMO ONLY (LOGIN USING THIS) <a onclick="showPass()">CLICK HERE</a>`;
             errorMessage.style.color = "rgb(0, 255, 0)";
         }, 5000);
     }
