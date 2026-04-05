@@ -216,12 +216,12 @@ svg.btnPlay {
     font-weight: 500;
 }
 
-.song-card svg:hover {
+.song-card svg.addBtn:hover {
     border-radius: 50%;
     background-color: whitesmoke;
     fill: black;
 }
-.song-card svg:active {
+.song-card svg.addBtn:active, .addAllBtn:active {
     scale: 0.8;
     border-radius: 50%;
     background-color: var(--primary-color);

@@ -331,7 +331,7 @@ songs.forEach(function(song) {
             <svg class="addBtn" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
                 <path fill="" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24m0 192a88 88 0 1 1 88-88a88.1 88.1 0 0 1-88 88m48-88a8 8 0 0 1-8 8h-32v32a8 8 0 0 1-16 0v-32H88a8 8 0 0 1 0-16h32V88a8 8 0 0 1 16 0v32h32a8 8 0 0 1 8 8"/>
             </svg>
-            <svg class="addedBtn" style="display: none; transform: scale(1);" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <svg class="addedBtn" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                 <path fill="var(--primary-color)" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/>
             </svg>
         </div>
@@ -341,16 +341,34 @@ songs.forEach(function(song) {
     songCards.forEach(document => {
         const addBtn = document.querySelector(".addBtn");
         const addedBtn = document.querySelector(".addedBtn");
-    
+        
         addBtn.addEventListener("click", () => {
             addBtn.style.display = "none";
             addedBtn.style.display = "block";
         });
-    
+        
         addedBtn.addEventListener("click", () => {
             addedBtn.style.display = "none";
             addBtn.style.display = "block";
         });
+
     });
+    
+});
+const addAllBtn = document.querySelector(".addAllBtn");
+const addedBtn = document.querySelector(".addedBtn");
+
+addAllBtn.addEventListener("click", () => {
+    console.log("clicked")
+    addAllBtn.style.fill = "var(--primary-color)";
+    addAllBtn.style.display = "none";
+    document.querySelectorAll(".addBtn").forEach(add => add.style.display = "none");
+    document.querySelectorAll(".addedBtn").forEach(added => added.style.display = "block");
 });
 
+addedBtn.addEventListener("click", () => {
+    addAllBtn.style.display = "block";
+    addAllBtn.style.fill = "whitesmoke";
+    document.querySelectorAll(".addBtn").forEach(add => add.style.display = "block");
+    document.querySelectorAll(".addedBtn").forEach(added => added.style.display = "none");
+});

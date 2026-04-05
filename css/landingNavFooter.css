@@ -51,12 +51,10 @@ nav .nav-menu {
     font-size: 1.1rem;
     font-weight: 600;
 }
-.nav-menu li a,
-.nav-menu li a i {
+.nav-menu a {
     transition: all .3s ease;
 }
-nav .nav-menu li a:hover,
-nav .nav-menu li a:hover i{
+nav .nav-menu a:hover{
     color: var(--primary-color);
     cursor: pointer;
 }
