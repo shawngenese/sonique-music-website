@@ -215,11 +215,20 @@ svg.btnPlay {
 .song-duration, .song-listeners, .song-number, .song-title, .add-song {
     font-weight: 500;
 }
-.song-card svg:active {
-    scale: 0.5;
-}
+
 .song-card svg:hover {
     border-radius: 50%;
     background-color: whitesmoke;
     fill: black;
+}
+.song-card svg:active {
+    scale: 0.8;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    fill: black;
+    transition: .1s;
+}
+.song-card svg.addedBtn:hover {
+    fill: var(--primary-color);
+    background-color: transparent;
 }
