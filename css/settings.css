@@ -49,6 +49,7 @@ header {
 
     background-color: var(--secondary-bg-color);
 }
+
 .left-header.active {
     border: 1px solid var(--light-gray-color);
 }
@@ -90,20 +91,25 @@ main section {
     flex: 1;
     height: max-content;
 }
+
 .container{
     margin: 20px 0;
 }
+
 .container-child {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    border-radius: 20px;
 
     transition: all 0.2s ease;
 }
+.container-child.active {
+    background-color: var(--primary-bg-color);
+}
 .container-child:hover {
     background-color: var(--primary-bg-color);
-    border-radius: 20px;
 }
 .container-child span {
     display: flex;
@@ -319,7 +325,7 @@ span.loginDevices {
     margin: 0 3px;
 }
 
-input[type="text"] {
+.popup input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px var(--secondary-bg-color) solid;
@@ -329,10 +335,10 @@ input[type="text"] {
     
     background-color: var(--gray-color);
 }
-input[type="text"]{
+.popup input[type="text"]{
     outline: var(--gray-color) 2px solid;
 }
-input[type="text"]:focus{
+.popup input[type="text"]:focus{
     outline:#FF6A21 2px solid;
 }
 .genderOption {
