@@ -313,3 +313,11 @@ svg.btnPlay {
 .song-duration, .song-album, .song-listeners, .song-number, .song-title, .add-song {
     font-weight: 500;
 }
+.song-card svg:active {
+    scale: 0.5;
+}
+.song-card svg:hover {
+    border-radius: 50%;
+    background-color: whitesmoke;
+    fill: black;
+}

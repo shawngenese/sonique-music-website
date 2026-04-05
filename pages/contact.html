@@ -11,13 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <section>
         <a onclick="window.history.back()" class="back">
             <p>< Back</p>
         </a>
-            <img src="../assets/images/logo.png" alt="" height="60" width="60">
-            <h1>Send us a Message</h1>
-            <p id="errorMessage" style="color: rgb(0, 255, 0);"></p>
+        <img src="../assets/images/logo.png" alt="" height="60" width="60">
+        <h1>Send us a Message</h1>
+        <p id="errorMessage" style="color: rgb(0, 255, 0);"></p>
+
         <form action="">
             <label for="">Name</label>
             <input type="text" placeholder="Name" id="name" required>
@@ -28,6 +30,7 @@
             <input type="submit" value="Send">
         </form>
     </section>
+
     <p>
         This contact page is created for educational purposes only. <a href="#">Terms and condition</a>.
         Your information will be deleted automatically when you close the browser
@@ -40,6 +43,7 @@
             <p>Sorry something went wrong there. Try again</p>
         </span> 
     </div>
+    
     <script>
         document.querySelector("form").addEventListener("submit", (e) => {
             e.preventDefault();

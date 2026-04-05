@@ -23,16 +23,14 @@ confirm.addEventListener("click", () => {
     logoutBtn.textContent = "Exit";
     cancelBtn.style.display = "none";
     backToHome();
-    // logoutBtn.onclick = () => window.location.href = "../index.html";
-    logoutBtn.onclick = () => window.location.replace("https://shawngenese.github.io/sonique-music-website/");
+    logoutBtn.onclick = () => window.location.href = "../index.html";
 });
 
 deleteBtn.addEventListener('click', () => {
     message.textContent = "Deleting your account...";
     deleteBtn.textContent = "Exit";
     backToHome();
-    // deleteBtn.onclick = () => window.location.href = "../index.html";
-    deleteBtn.onclick = () => window.location.replace("https://shawngenese.github.io/sonique-music-website/");
+    deleteBtn.onclick = () => window.location.href = "../index.html";
     cancelBtn.style.display = "none";
 });
 
