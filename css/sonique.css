@@ -82,10 +82,10 @@ main {
     justify-content: center;
 
     margin: 0 0 50px 0;
-    padding: 30px;
+    /* padding: 30px; */
     border-radius: 25px;
 
-    text-align: center;
+    /* text-align: center; */
     font-size: 5rem;
     font-weight: 550;
 
@@ -103,7 +103,7 @@ main {
 }  
 .playlist-preview img{
     width: 100%;
-    height: 250px;
+    height: 420px;
     border-radius: 20px;
 
     object-fit: cover;
@@ -116,14 +116,40 @@ main {
     gap: 20px;
     margin: 0 20px;
 }
+.albums-section span, 
+.artists-section span {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    font-weight: 500;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+.albums-section span a,
+.artists-section span a {
+    color: var(--light-gray-color);
+    font-size: 1.1rem;
+}
+.albums-section span a:hover,
+.artists-section span a:hover {
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.albums-section span a:active,
+.artists-section span a:active {
+    scale: 0.8;
+}
 .albums,
 .artists {
     display: flex;
     overflow: auto;
 }
 .albums img {
-    border-radius: 10px;
+    border-radius: 16px;
     margin: 0px 5px 20px 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .albums .cards,
 .artists .cards {
@@ -133,7 +159,8 @@ main {
     flex-direction: column;
     align-items: baseline;
 
-    padding: 15px;
+    padding: 16px;
+    margin: 5px;
     margin-bottom: 10px;
 
     transition: all 0.3s ease-out ;
@@ -149,6 +176,8 @@ main {
 .artists .cards:hover {
     background-color: var(--primary-bg-color);
     border-radius: 23px;
+
+    transform: translateY(-6px);
 }
 .artists .cards img {
     margin: 0px 5px 20px 5px;
@@ -156,8 +185,10 @@ main {
 
     object-fit: cover;
     object-position: center;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 .cards::after {
     content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path fill="white" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128"/></svg>');
     position: absolute;

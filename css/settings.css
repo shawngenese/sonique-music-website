@@ -100,6 +100,8 @@ main section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    margin: 3px 0;
     padding: 15px;
     border-radius: 20px;
 
@@ -110,6 +112,9 @@ main section {
 }
 .container-child:hover {
     background-color: var(--primary-bg-color);
+}
+.settings-section .container .container-child:hover {
+    background-color: var(--gray-color);
 }
 .container-child span {
     display: flex;
