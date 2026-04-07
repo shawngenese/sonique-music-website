@@ -18,14 +18,14 @@
         </a>
         <img src="../assets/images/logo.png" alt="" height="60" width="60">
         <h1>Send us a Message</h1>
-        <p id="errorMessage" style="color: rgb(0, 255, 0);"></p>
+        <p id="errorMessage" style="color: rgb(0, 255, 0); text-align: center;"></p>
 
         <form action="">
             <label for="">Name</label>
             <input type="text" placeholder="Name" id="name" required>
             <label for="">Email or username</label>
             <input type="email" name="" id="email" placeholder="Email or username">
-            <label for="">Your message:</label>
+            <label for="">Your message</label>
             <textarea placeholder="Your Message" rows="5" id="textarea" required"></textarea>
             <input type="submit" value="Send">
         </form>
@@ -44,14 +44,6 @@
         </span> 
     </div>
     
-    <script>
-        document.querySelector("form").addEventListener("submit", (e) => {
-            e.preventDefault();
-            document.querySelector("#errorMessage").textContent = "Thank you for addressing your concern.";
-            setTimeout(() => {
-                window.history.back();
-            }, 2000);
-        });
-    </script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
