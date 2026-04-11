@@ -103,48 +103,54 @@
                 <h1>Your Top Albums</h1>
                 <a href="">See All</a>
             </span>
-            <div class="albums">
-                <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
-                    <p>Fearless (Taylor's Version)</p>
-                    <p>Taylor Swift</p>
-                </a>
-
-                <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
-                    <p>Speak Now (Taylor's Version)</p>
-                    <p>Taylor Swift</p>
-                </a>
-
-                <a onclick="showAlbum('SOS', 'SZA')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
-                    <p>SOS</p>
-                    <p>SZA</p>
-                </a>
-
-                <a onclick="showAlbum('Hatful of Hollow', 'The Smiths')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" height="250">
-                    <p>Hatful of Hollow</p>
-                    <p>The Smiths</p>
-                </a>
-
-                <a onclick="showAlbum('Kid Krow', 'Conan Gray')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" height="250">
-                    <p>Kid Krow</p>
-                    <p>Conan Gray</p>
-                </a>
-
-                <a onclick="showAlbum('Harry\'s House', 'Harry Styles')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-10.jpg" alt="" height="250">
-                    <p>Harry's House</p>
-                    <p>Harry Styles</p>
-                </a>
-
-                <a onclick="showAlbum('Doo-Wops N Hooligans', 'Bruno Mars')" class="cards">
-                    <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
-                    <p>Doo-Wops & Hooligans</p>
-                    <p>Bruno Mars</p>
-                </a>
+            <div class="scroll-container">
+                <svg class="scrollBtnLeft" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M8.293 12.707a1 1 0 0 1 0-1.414l5.657-5.657a1 1 0 1 1 1.414 1.414L10.414 12l4.95 4.95a1 1 0 0 1-1.414 1.414z"/>
+                    </g>
+                </svg>
+                <div class="albums">
+                    <a onclick="showAlbum('Fearless (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-11.jpg" alt="" height="250">
+                        <p>Fearless (Taylor's Version)</p>
+                        <p>Taylor Swift</p>
+                    </a>
+                    <a onclick="showAlbum('Speak Now (Taylor\'s Version)', 'Taylor Swift')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-12.jpg" alt="" height="250">
+                        <p>Speak Now (Taylor's Version)</p>
+                        <p>Taylor Swift</p>
+                    </a>
+                    <a onclick="showAlbum('SOS', 'SZA')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-14.jpg" alt="" height="250">
+                        <p>SOS</p>
+                        <p>SZA</p>
+                    </a>
+                    <a onclick="showAlbum('Hatful of Hollow', 'The Smiths')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-08.jpg" alt="" height="250">
+                        <p>Hatful of Hollow</p>
+                        <p>The Smiths</p>
+                    </a>
+                    <a onclick="showAlbum('Kid Krow', 'Conan Gray')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-09.jpg" alt="" height="250">
+                        <p>Kid Krow</p>
+                        <p>Conan Gray</p>
+                    </a>
+                    <a onclick="showAlbum('Harry\'s House', 'Harry Styles')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-10.jpg" alt="" height="250">
+                        <p>Harry's House</p>
+                        <p>Harry Styles</p>
+                    </a>
+                    <a onclick="showAlbum('Doo-Wops N Hooligans', 'Bruno Mars')" class="cards">
+                        <img src="../assets/images/albums/playlist-cover-13.jpg" alt="" height="250">
+                        <p>Doo-Wops & Hooligans</p>
+                        <p>Bruno Mars</p>
+                    </a>
+                </div>
+                <svg class="scrollBtnRight" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"/>
+                    </g>
+                </svg>
             </div>
         </section>
 
@@ -153,67 +159,69 @@
                 <h1>Your Top Artists</h1>
                 <a href="">See All</a>
             </span>
-
-            <div class="artists">
-                <a onclick="showArtist('Daniel Caesar')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-08.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Daniel Caesar</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Frank Ocean')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-09.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Frank Ocean</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Laufey')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-04.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Laufey</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('IV of Spades')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-10.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>IV OF SPADES</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Arthur Nery')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-01.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Arthur Nery</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Earl Agustin')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-02.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Earl Agustin</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Rob Deniel')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-03.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Rob Deniel</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Lana Del Rey')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-05.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Lana Del Rey</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Maki')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-06.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Maki</p>
-                    <p>Artist</p>
-                </a>
-
-                <a onclick="showArtist('Rex Orange Country')" class="cards">
-                    <img src="../assets/images/artists/artist-cover-07.jpg" alt="" height="250" width="250" loading="lazy">
-                    <p>Rex Orange Country</p>
-                    <p>Artist</p>
-                </a>
+            <div class="scroll-container">
+                <svg class="scrollBtnLeft" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M8.293 12.707a1 1 0 0 1 0-1.414l5.657-5.657a1 1 0 1 1 1.414 1.414L10.414 12l4.95 4.95a1 1 0 0 1-1.414 1.414z"/>
+                    </g>
+                </svg>
+                <div class="artists">
+                    <a onclick="showArtist('Daniel Caesar')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-08.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Daniel Caesar</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Frank Ocean')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-09.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Frank Ocean</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Laufey')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-04.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Laufey</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('IV of Spades')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-10.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>IV OF SPADES</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Arthur Nery')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-01.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Arthur Nery</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Earl Agustin')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-02.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Earl Agustin</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Rob Deniel')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-03.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Rob Deniel</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Lana Del Rey')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-05.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Lana Del Rey</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Maki')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-06.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Maki</p>
+                        <p>Artist</p>
+                    </a>
+                    <a onclick="showArtist('Rex Orange Country')" class="cards">
+                        <img src="../assets/images/artists/artist-cover-07.jpg" alt="" height="250" width="250" loading="lazy">
+                        <p>Rex Orange Country</p>
+                        <p>Artist</p>
+                    </a>
+                </div>
+                <svg class="scrollBtnRight" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"/>
+                    </g>
+                </svg>
             </div>
         </section>
     </main>
@@ -259,5 +267,6 @@
     <script src="../js/showAlbum.js"></script>
     <script src="../js/showArtist.js"></script>
     <script src="../js/toggleNav.js"></script>
+    <script src="../js/scroll.js"></script>
 </body>
 </html>

@@ -349,3 +349,37 @@ svg.btnPlay {
     fill: var(--primary-color);
     background-color: transparent;
 }
+.scroll-container {
+    position: relative;
+    scroll-snap-type: x mandatory;
+}
+.albums, .artists {
+    scroll-behavior: smooth;
+}
+.scroll-container:hover .scrollBtnLeft,
+.scroll-container:hover .scrollBtnRight {
+    opacity: 1;
+}
+.scrollBtnLeft, .scrollBtnRight {
+    background-color: var(--gray-color);
+    padding: 8px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 13%;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    opacity: 0;
+    top: 40%;
+}
+.scrollBtnLeft {
+    left: 0;
+
+}
+.scrollBtnRight {
+    right: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
