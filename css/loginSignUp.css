@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100%;
     padding: 20px;
 
@@ -229,8 +229,8 @@ section .social-container {
     }
 }
 
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px)  { 
-    section {
-        width: 100%;
+@media (max-width: 481px) {
+    body {
+        padding: 10px;
     }
-} */
+}

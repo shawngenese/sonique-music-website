@@ -41,7 +41,7 @@ nav .logo {
     cursor: pointer;
 }
 nav .logo h1 {
-    font-size: clamp(2em, 2vw, 2.2em);
+    font-size: clamp(1.5em, 2vw, 2.2em);
 }
 nav .nav-menu {
     display: flex;

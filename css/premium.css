@@ -32,7 +32,7 @@ main {
 }
 
 main > h1 {
-    font-size: clamp(2em, 4vw, 4em);
+    font-size: clamp(1.5em, 4vw, 4em);
     text-align: center;
 
     opacity: 0;
@@ -280,51 +280,43 @@ section .premium-box.blue button {
     }
 }
 
-@media (max-width: 481px) {
-
-}
 @media (max-width: 768px) {
-  .panel3 .description-images {
-    margin: 20px;
-    width: 100%;
-  }
-  .panel1 img {
-    width: 100%;
-  }
-  footer {
-    padding: 20px;
-  }
+    main {
+        padding: 50px 0px;
+    }
+    footer {
+        padding: 20px;
+    }
+}
+@media (max-width: 481px) {
+    main {
+        padding: 30px 0;
+    }
+    main .premium-box {
+        font-size: 0.7rem;
+        padding: 35px 20px;
+        width: 100%;
+    }
+
 }
 @media (max-width: 1128px) {
-    .panel1 img {
-    width: 60%;
-  }
-  nav .nav-menu{
-    display: none;
-  }
-  nav {
-    justify-content: space-between;
-  }
-  
-  .container {
-    flex-direction: column;
-    align-items: start;
-  }
+    nav .nav-menu{
+        display: none;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    .container {
+        flex-direction: column;
+        align-items: start;
+    }
 
-  .nav-menu .loginBtn {
-    display: flex;
-    margin-right: 20px;
-  }
+    .nav-menu .loginBtn {
+        display: flex;
+        margin-right: 20px;
+    }
 
-  nav .hamburger-menu {
-    display: flex;
-  }
-  .panel1 {
-    flex-direction: column-reverse;
-    gap: 20px;
-  }
-
-  .panel1, .panel2, .panel3, .panel4 {
-    padding: 50px 70px;
-  }
+    nav .hamburger-menu {
+        display: flex;
+    }
 }

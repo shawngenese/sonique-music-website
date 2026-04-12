@@ -67,8 +67,7 @@ main {
     scale: 0.95;
 }
 .panel1 p {
-    font-size: 0.9rem;
-    font-size: clamp(0.6rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     color: var(--light-gray-color);
 }
 .panel1 img {
@@ -106,7 +105,7 @@ main {
     background-color: var(--primary-color);
 }
 .panel2 h2 {
-    font-size: clamp(2em, 3vw, 4em);
+    font-size: clamp(1.5em, 3vw, 4em);
 
     animation: slideUp linear forwards;
     animation-timeline: view();
@@ -118,7 +117,7 @@ main {
 
     animation: slideUp linear forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 50%;
+    animation-range: entry 0% cover 30%;
 }
 .panel3 {
     display: flex;
@@ -136,6 +135,9 @@ main {
 .panel3 h2 {
     font-size: clamp(1rem, 2vw, 2em);
 }
+.panel3 > p {
+    text-align: center;
+}
 .panel3 p {
     font-size: clamp(1rem, 2vw, 1.6rem);
     margin-bottom: 50px;
@@ -143,9 +145,9 @@ main {
 .panel3 .description-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 60px;
+    /* gap: 60px; */
     
     margin: 20px 0;
     padding: 20px;
@@ -166,9 +168,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 600px;
-    flex-grow: 1;  
+    width: 40%;
+    /* flex-basis: 600px; */
+    /* flex-grow: 1;   */
     gap: 10px;
+}
+.panel3 .description-images .image {
+    width: 50%;
 }
 .panel3 .description-images img {
     width: 100%;
@@ -201,7 +207,7 @@ main {
     font-weight: 600;
 }
 .panel4 h1 {
-    font-size: clamp(2em, 4vw, 4em);
+    font-size: clamp(1.5em, 4vw, 4em);
     text-align: center;
     margin-top: 20px;
 
@@ -269,7 +275,7 @@ main {
 .panel4 > p {
     text-align: center;
     font-size: 0.9rem;
-    font-size: clamp(0.5rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     color: var(--light-gray-color);
 }
 
@@ -332,12 +338,18 @@ main {
 }
 
 @media (max-width: 768px) {
-  /* Styles for screens wider than 768px (e.g., tablet portrait, small laptops) */
-
   .panel3 .description-images {
     margin: 20px;
     width: 100%;
+    flex-direction: column;
   }
+  .panel3 .description-images .description {
+    width: 100%;
+  }
+  
+  .panel3 .description-images .image {
+    width: 100%;
+    }
   .panel1 img {
     width: 100%;
   }
@@ -346,7 +358,6 @@ main {
   }
 }
 @media (max-width: 1128px) {
-  /* Styles for screens wider than 1024px (e.g., large tablets landscape, desktops) */
     .panel1 img {
     width: 60%;
   }
@@ -356,7 +367,6 @@ main {
   nav {
     justify-content: space-between;
   }
-  
   .container {
     flex-direction: column;
     align-items: start;
@@ -380,8 +390,19 @@ main {
   }
 }
 @media (max-width: 481px) {
-  /* Styles for screens wider than 480px */
   .panel1 {
       padding: 60px 10px;
+  }
+  .panel3, .panel2 {
+    padding: 30px 20px;
+  }
+  .panel3 > p {
+    margin-bottom: 12px;
+  }
+  .panel3 .description-images {
+    gap: 0;
+  }
+  .panel4 {
+    padding: 30px 0;
   }
 }
